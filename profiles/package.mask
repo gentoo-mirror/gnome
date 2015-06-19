@@ -1,0 +1,12 @@
+####################################################################
+# $Header: $
+#
+# When you add an entry to the top of this file, add your name, the date, and
+# an explanation of why something is getting masked. Please be extremely
+# careful not to commit atoms that are not valid, as it can cause large-scale
+# breakage, especially if it ends up in the daily snapshot.
+#
+
+# Gilles Dartiguelongue <eva@gentoo.org> (22 Dec 2013)
+# New releases depend on libmapi-2 which is not in tree nor in this overlay.
+>=evolution-mapi/evolution-mapi-3.10
