@@ -69,7 +69,7 @@ gnome-extra/gnome-power-manager 9999: GNOME power management service
 gnome-extra/gnome-search-tool 9999: Search tool for GNOME 3
 gnome-extra/gnome-shell-extensions 9999: JavaScript extensions for GNOME Shell
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
-gnome-extra/gnome-software 3.16.4: Gnome install & update software
+gnome-extra/gnome-software 3.16.5: Gnome install & update software
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
 gnome-extra/gnome-tweak-tool 9999: Tool to customize GNOME 3 options
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
