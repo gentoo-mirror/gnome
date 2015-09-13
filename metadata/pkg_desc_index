@@ -24,10 +24,10 @@ app-text/yelp-tools 9999: Collection of tools for building and converting docume
 dev-libs/folks 9999: Library for aggregating people from multiple sources
 dev-libs/gdl 9999: GNOME docking library
 dev-libs/gjs 9999: Javascript bindings for GNOME
-dev-libs/glib 9999: The GLib library of C routines
+dev-libs/glib 2.45.7 9999: The GLib library of C routines
 dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
-dev-libs/gobject-introspection 9999: Introspection infrastructure for generating gobject library bindings for various languages
-dev-libs/gobject-introspection-common 9999: Build infrastructure for GObject Introspection
+dev-libs/gobject-introspection 1.45.4 9999: Introspection infrastructure for generating gobject library bindings for various languages
+dev-libs/gobject-introspection-common 1.45.4 9999: Build infrastructure for GObject Introspection
 dev-libs/libgdata 9999: GLib-based library for accessing online service APIs using the GData protocol
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
@@ -35,7 +35,7 @@ dev-libs/libpeas 9999: A GObject plugins library
 dev-libs/totem-pl-parser 9999: Playlist parsing library
 dev-python/pyatspi 9999: Python binding to at-spi library
 dev-python/pygobject 9999: GLib's GObject library bindings for Python
-dev-util/gdbus-codegen 9999: GDBus code and documentation generator
+dev-util/gdbus-codegen 2.45.7 9999: GDBus code and documentation generator
 dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
 games-board/aisleriot 3.16.2 9999: A collection of solitaire card games for GNOME
 gnome-base/dconf 9999: Simple low-level configuration system
@@ -47,12 +47,12 @@ gnome-base/gnome-keyring 9999: Password and keyring managing daemon
 gnome-base/gnome-menus 9999: Library for the Desktop Menu fd.o specification
 gnome-base/gnome-session 9999: Gnome session manager
 gnome-base/gnome-settings-daemon 9999: Gnome Settings Daemon
-gnome-base/gnome-shell 9999: Provides core UI functions for the GNOME 3 desktop
+gnome-base/gnome-shell 3.17.91 9999: Provides core UI functions for the GNOME 3 desktop
 gnome-base/gsettings-desktop-schemas 9999: Collection of GSettings schemas for GNOME desktop
 gnome-base/gvfs 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
 gnome-base/nautilus 9999: A file manager for the GNOME desktop
-gnome-extra/evolution-data-server 9999: Evolution groupware backend
+gnome-extra/evolution-data-server 3.17.91 9999: Evolution groupware backend
 gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exchange Web Services
 gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
 gnome-extra/evolution-groupwise 9999: Evolution module for connecting to Novell Groupwise
@@ -82,9 +82,9 @@ mail-client/evolution 9999: Integrated mail, addressbook and calendaring functio
 media-gfx/eog 9999: The Eye of GNOME image viewer
 media-gfx/gnome-font-viewer 9999: Font viewer for GNOME
 media-gfx/gnome-screenshot 9999: Screenshot utility for GNOME
-media-libs/clutter 9999: Clutter is a library for creating graphical user interfaces
+media-libs/clutter 1.23.6 9999: Clutter is a library for creating graphical user interfaces
 media-libs/clutter-gtk 9999: Library for embedding a Clutter canvas (stage) in GTK+
-media-libs/cogl 9999: A library for using 3D graphics hardware to draw pretty pictures
+media-libs/cogl 1.21.2 9999: A library for using 3D graphics hardware to draw pretty pictures
 media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event library
 media-libs/mash 9999: A library for rendering 3D models with Clutter
 media-sound/girl 6.0.0: Easily find and record live radio programs on the Internet
@@ -125,4 +125,4 @@ x11-themes/gnome-backgrounds 9999: A set of backgrounds packaged with the GNOME 
 x11-themes/gnome-icon-theme-symbolic 9999: Symbolic icons for GNOME default icon theme
 x11-themes/gnome-themes-standard 9999: Standard Themes for GNOME Applications
 x11-themes/gtk-engines-unico 9999: The Unico GTK+ 3.x theming engine
-x11-wm/mutter 9999: GNOME 3 compositing window manager based on Clutter
+x11-wm/mutter 3.17.91 9999: GNOME 3 compositing window manager based on Clutter
