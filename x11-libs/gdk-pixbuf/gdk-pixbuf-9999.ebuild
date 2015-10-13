@@ -7,13 +7,20 @@ GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
 inherit eutils flag-o-matic gnome2 multilib libtool multilib-minimal
+if [[ ${PV} = 9999 ]]; then
+	inherit gnome2-live
+fi
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+if [[ ${PV} = 9999 ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+fi
 IUSE="+X debug +introspection jpeg jpeg2k tiff test"
 
 COMMON_DEPEND="
@@ -47,18 +54,7 @@ MULTILIB_CHOST_TOOLS=(
 )
 
 src_prepare() {
-	# Upstream patches from 2.31.x
-	epatch "${FILESDIR}"/${PN}-2.31.6-pixops-variable-type.patch \
-		"${FILESDIR}"/${PN}-2.31.6-pixops-gcc-optimizer.patch \
-		"${FILESDIR}"/${PN}-2.31.6-png-overflow.patch \
-		"${FILESDIR}"/${PN}-2.31.6-jpeg-overflow.patch \
-		"${FILESDIR}"/${PN}-2.31.6-pixops-overflow.patch \
-		"${FILESDIR}"/${PN}-2.31.6-alpha-overflow.patch \
-		"${FILESDIR}"/${PN}-2.31.6-rotate-overflow.patch #556314
-
-	# ERROR: cve-2015-4491 - missing test plan
-	# FIXME - check if this works in 2.31.7
-	sed -e 's/cve-2015-4491$(EXEEXT)//' -i tests/Makefile.in || die
+	[[ ${PV} = 9999 ]] && eautoreconf
 
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
