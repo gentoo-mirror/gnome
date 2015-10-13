@@ -51,7 +51,7 @@ gnome-base/gnome-session 3.18.0 9999: Gnome session manager
 gnome-base/gnome-settings-daemon 3.18.0 9999: Gnome Settings Daemon
 gnome-base/gnome-shell 3.18.0 9999: Provides core UI functions for the GNOME 3 desktop
 gnome-base/gsettings-desktop-schemas 9999: Collection of GSettings schemas for GNOME desktop
-gnome-base/gvfs 9999: Virtual filesystem implementation for gio
+gnome-base/gvfs 1.26.1 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
 gnome-base/nautilus 3.18.0 9999: A file manager for the GNOME desktop
 gnome-extra/evolution-data-server 3.17.92 9999: Evolution groupware backend
@@ -97,7 +97,7 @@ media-video/cheese 9999: A cheesy program to take pictures and videos from your 
 media-video/totem 9999: Media player for GNOME
 net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
 net-im/empathy 9999: Telepathy instant messaging and video/audio call client for GNOME
-net-libs/gnome-online-accounts 9999: GNOME framework for accessing online accounts
+net-libs/gnome-online-accounts 3.18.0 9999: GNOME framework for accessing online accounts
 net-libs/gtk-vnc 9999: VNC viewer widget for GTK
 net-libs/libgssh 2014.4: GIO-like friendly API for libssh
 net-libs/libsoup 9999: An HTTP library implementation in C

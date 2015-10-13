@@ -65,7 +65,9 @@ gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) 
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
+gnome-base/gvfs:gcr - Enable support for app-crypt/gcr
 gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
+gnome-base/gvfs:google - Add google drive support
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
 gnome-base/gvfs:libsecret - Enable app-crypt/libsecret support to store login credentials.
 gnome-base/gvfs:nfs - Enable NFS client support via net-fs/libnfs.
@@ -121,7 +123,6 @@ net-im/empathy:geoloc - Enable geolocation support through app-misc/geoclue
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)
 net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-libs/gnome-online-accounts:gnome - Use gnome-base/gnome-control-center to set GNOME online accounts preferences
-net-libs/gnome-online-accounts:telepathy - Provide widget to configure the telepathy frawework
 net-libs/gtk-vnc:gtk3 - Build the gtk3 gtk-vnc library and other gtk3 assets
 net-libs/gtk-vnc:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gtk-vnc:vala - Enable bindings for dev-lang/vala
