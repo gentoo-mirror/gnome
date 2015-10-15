@@ -53,7 +53,7 @@ gnome-base/gnome-shell 3.18.0 9999: Provides core UI functions for the GNOME 3 d
 gnome-base/gsettings-desktop-schemas 9999: Collection of GSettings schemas for GNOME desktop
 gnome-base/gvfs 1.26.1 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
-gnome-base/nautilus 3.18.0 9999: A file manager for the GNOME desktop
+gnome-base/nautilus 3.18.1 9999: A file manager for the GNOME desktop
 gnome-extra/evolution-data-server 3.17.92 9999: Evolution groupware backend
 gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exchange Web Services
 gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
