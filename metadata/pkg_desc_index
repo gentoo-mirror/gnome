@@ -120,9 +120,9 @@ x11-libs/libcryptui 9999: User interface components for OpenPGP
 x11-libs/libwnck 9999: A window navigation construction kit
 x11-libs/pango 1.37.5 9999: Internationalized text layout and rendering library
 x11-libs/pangox-compat 9999: PangoX compatibility library
-x11-libs/vte 0.42.0 9999: Library providing a virtual terminal emulator widget
+x11-libs/vte 0.42.1 9999: Library providing a virtual terminal emulator widget
 x11-misc/colord 9999: System service to accurately color manage input and output devices
-x11-terms/gnome-terminal 3.18.0 9999: The Gnome Terminal
+x11-terms/gnome-terminal 3.18.1 9999: The Gnome Terminal
 x11-themes/adwaita-icon-theme 3.18.0: GNOME default icon theme
 x11-themes/gnome-backgrounds 3.18.0 9999: A set of backgrounds packaged with the GNOME desktop
 x11-themes/gnome-icon-theme-symbolic 9999: Symbolic icons for GNOME default icon theme
