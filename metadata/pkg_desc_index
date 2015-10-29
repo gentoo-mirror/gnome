@@ -54,7 +54,7 @@ gnome-base/gsettings-desktop-schemas 9999: Collection of GSettings schemas for G
 gnome-base/gvfs 1.26.1 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
 gnome-base/nautilus 3.18.1 9999: A file manager for the GNOME desktop
-gnome-extra/evolution-data-server 3.17.92 9999: Evolution groupware backend
+gnome-extra/evolution-data-server 3.18.1 9999: Evolution groupware backend
 gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exchange Web Services
 gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
 gnome-extra/evolution-groupwise 9999: Evolution module for connecting to Novell Groupwise
@@ -80,7 +80,7 @@ gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decryp
 gnome-extra/sushi 9999: A quick previewer for Nautilus, the GNOME file manager
 gnome-extra/yelp 9999: Help browser for GNOME
 gnome-extra/yelp-xsl 9999: XSL stylesheets for yelp
-mail-client/evolution 3.17.92 9999: Integrated mail, addressbook and calendaring functionality
+mail-client/evolution 3.18.1 9999: Integrated mail, addressbook and calendaring functionality
 media-gfx/eog 9999: The Eye of GNOME image viewer
 media-gfx/gnome-font-viewer 9999: Font viewer for GNOME
 media-gfx/gnome-screenshot 9999: Screenshot utility for GNOME
