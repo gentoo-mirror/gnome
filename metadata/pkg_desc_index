@@ -73,7 +73,7 @@ gnome-extra/gnome-shell-extensions 3.18.0 9999: JavaScript extensions for GNOME 
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
 gnome-extra/gnome-software 3.16.5: Gnome install & update software
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
-gnome-extra/gnome-tweak-tool 9999: Tool to customize GNOME 3 options
+gnome-extra/gnome-tweak-tool 3.18.0 9999: Tool to customize GNOME 3 options
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
 gnome-extra/libgda 9999: GNOME database access library
 gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decrypting files with GnuPG
