@@ -1,8 +1,9 @@
 app-accessibility/at-spi2-atk 9999: Gtk module for bridging AT-SPI to Atk
 app-accessibility/at-spi2-core 9999: D-Bus accessibility specifications and registration daemon
 app-admin/gnome-system-log 9999: System log viewer for GNOME
-app-admin/packagekit-base 1.0.6: Manage packages in a secure way using a cross-distro and cross-architecture API
-app-admin/packagekit-gtk 1.0.6: Gtk3 PackageKit backend library
+app-admin/packagekit 1.0.10: PackageKit Package Manager interface (meta package)
+app-admin/packagekit-base 1.0.10: Manage packages in a secure way using a cross-distro and cross-architecture API
+app-admin/packagekit-gtk 1.0.10: Gtk3 PackageKit backend library
 app-arch/file-roller 9999: Archive manager for GNOME
 app-cdr/brasero 9999: CD/DVD burning application for the GNOME desktop
 app-crypt/gcr 9999: Libraries for cryptographic UIs and accessing PKCS#11 modules
@@ -75,7 +76,7 @@ gnome-extra/gnome-power-manager 9999: GNOME power management service
 gnome-extra/gnome-search-tool 9999: Search tool for GNOME 3
 gnome-extra/gnome-shell-extensions 3.18.0 9999: JavaScript extensions for GNOME Shell
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
-gnome-extra/gnome-software 3.16.5: Gnome install & update software
+gnome-extra/gnome-software 3.16.5 3.18.3: Gnome install & update software
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
 gnome-extra/gnome-tweak-tool 3.18.0 9999: Tool to customize GNOME 3 options
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
