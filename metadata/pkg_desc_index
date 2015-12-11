@@ -2,6 +2,7 @@ app-accessibility/at-spi2-atk 9999: Gtk module for bridging AT-SPI to Atk
 app-accessibility/at-spi2-core 9999: D-Bus accessibility specifications and registration daemon
 app-admin/gnome-system-log 9999: System log viewer for GNOME
 app-admin/packagekit 1.0.10: PackageKit Package Manager interface (meta package)
+app-admin/packagekit-base 1.0.10: Manage packages in a secure way using a cross-distro and cross-architecture API
 app-admin/packagekit-gtk 1.0.10: Gtk3 PackageKit backend library
 app-arch/file-roller 9999: Archive manager for GNOME
 app-cdr/brasero 9999: CD/DVD burning application for the GNOME desktop
@@ -13,9 +14,11 @@ app-crypt/seahorse-sharing 9999: Daemon for PGP public key sharing using DNS-SD 
 app-dicts/gnome-dictionary 9999: Dictionary utility for GNOME
 app-editors/gedit 9999: A text editor for the GNOME desktop
 app-editors/ghex 9999: GNOME hexadecimal editor
+app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
 app-misc/gnote 9999: Desktop note-taking application
 app-misc/tracker-miner-media 0.1.0: Fetches additional metadata from online resources for media files for tracker
 app-mobilephone/gnome-phone-manager 9999: A program created to allow you to control aspects of your mobile phone from your GNOME desktop
+app-office/planner 9999: Project manager for Gnome
 app-text/evince 3.18.0 9999: Simple document viewer for GNOME
 app-text/libgxps 9999: Library for handling and rendering XPS documents
 app-text/yelp-tools 9999: Collection of tools for building and converting documentation
@@ -24,6 +27,7 @@ dev-libs/gdl 9999: GNOME docking library
 dev-libs/gjs 9999: Javascript bindings for GNOME
 dev-libs/glib 2.46.0-r1 9999: The GLib library of C routines
 dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
+dev-libs/gobject-introspection 1.45.4 9999: Introspection infrastructure for generating gobject library bindings for various languages
 dev-libs/gobject-introspection-common 1.45.4 9999: Build infrastructure for GObject Introspection
 dev-libs/libgdata 9999: GLib-based library for accessing online service APIs using the GData protocol
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
@@ -33,6 +37,7 @@ dev-libs/totem-pl-parser 9999: Playlist parsing library
 dev-python/pyatspi 9999: Python binding to at-spi library
 dev-python/pygobject 3.18.0 9999: GLib's GObject library bindings for Python
 dev-util/gdbus-codegen 2.46.0 9999: GDBus code and documentation generator
+dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
 games-arcade/gnome-robots 3.18.1: Avoid the robots and make them crash into each other
 games-board/aisleriot 3.16.2 3.18.2 9999: A collection of solitaire card games for GNOME
 games-board/four-in-a-row 3.18.2: Make lines of the same color to win
@@ -75,6 +80,7 @@ gnome-extra/gnome-software 3.16.5 3.18.3: Gnome install & update software
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
 gnome-extra/gnome-tweak-tool 3.18.0 9999: Tool to customize GNOME 3 options
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
+gnome-extra/libgda 9999: GNOME database access library
 gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decrypting files with GnuPG
 gnome-extra/sushi 9999: A quick previewer for Nautilus, the GNOME file manager
 gnome-extra/yelp 9999: Help browser for GNOME
@@ -93,6 +99,7 @@ media-sound/goobox 3.4.0: Goobox is a CD player for the GNOME desktop environmen
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
 media-sound/sound-juicer 9999: CD ripper for GNOME
 media-video/cheese 9999: A cheesy program to take pictures and videos from your webcam
+media-video/totem 9999: Media player for GNOME
 net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
 net-im/empathy 9999: Telepathy instant messaging and video/audio call client for GNOME
 net-libs/gnome-online-accounts 3.18.0 9999: GNOME framework for accessing online accounts
@@ -102,7 +109,7 @@ net-libs/libsoup 9999: An HTTP library implementation in C
 net-libs/libzapojit 9999: GLib/GObject wrapper for the SkyDrive and Hotmail REST APIs
 net-libs/rest 9999: Helper library for RESTful services
 net-misc/hotssh 9999: An interface to Secure Shell for Gnome and OpenSSH
-net-misc/spice-gtk 0.28-r1: Set of GObject and Gtk objects for connecting to Spice servers and a client GUI
+net-misc/spice-gtk 0.28-r1 9999: Set of GObject and Gtk objects for connecting to Spice servers and a client GUI
 net-misc/vinagre 9999: VNC client for the GNOME desktop
 net-misc/vino 9999: An integrated VNC server for GNOME
 net-wireless/gnome-bluetooth 3.18.0 9999: Bluetooth graphical utilities integrated with GNOME
