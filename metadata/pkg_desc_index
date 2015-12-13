@@ -29,6 +29,7 @@ dev-libs/glib 2.46.0-r1 9999: The GLib library of C routines
 dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
 dev-libs/gobject-introspection 1.45.4 9999: Introspection infrastructure for generating gobject library bindings for various languages
 dev-libs/gobject-introspection-common 1.45.4 9999: Build infrastructure for GObject Introspection
+dev-libs/libgames-support 0.2: Library for code commong to Gnome games
 dev-libs/libgdata 9999: GLib-based library for accessing online service APIs using the GData protocol
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
@@ -43,6 +44,7 @@ games-board/aisleriot 3.16.2 3.18.2 9999: A collection of solitaire card games f
 games-board/four-in-a-row 3.18.2: Make lines of the same color to win
 games-puzzle/gnome-klotski 3.18.2: Slide blocks to solve the puzzle
 games-puzzle/gnome-sudoku 3.18.2: Test your logic skills in this number grid puzzle
+games-puzzle/gnome2048 3.18.2: Move the tiles until you obtain the 2048 tile
 gnome-base/dconf 9999: Simple low-level configuration system
 gnome-base/gconf 9999: GNOME configuration system and daemon
 gnome-base/gdm 9999: GNOME Display Manager for managing graphical display servers and user logins
@@ -64,7 +66,7 @@ gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exc
 gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
 gnome-extra/evolution-groupwise 9999: Evolution module for connecting to Novell Groupwise
 gnome-extra/evolution-kolab 9999: Evolution module for connecting to Kolab groupware servers
-gnome-extra/evolution-mapi 3.16.3 9999: Evolution module for connecting to Microsoft Exchange
+gnome-extra/evolution-mapi 3.18.2 9999: Evolution module for connecting to Microsoft Exchange
 gnome-extra/gcalctool 9999: A calculator application for GNOME
 gnome-extra/gnome-boxes 9999: Simple GNOME 3 application to access remote or virtual systems
 gnome-extra/gnome-boxes-nonfree 0.0.2: Vendor logos for gnome-boxes
@@ -95,7 +97,7 @@ media-libs/clutter-gtk 9999: Library for embedding a Clutter canvas (stage) in G
 media-libs/cogl 1.21.2 9999: A library for using 3D graphics hardware to draw pretty pictures
 media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event library
 media-libs/mash 9999: A library for rendering 3D models with Clutter
-media-sound/girl 6.0.0: Easily find and record live radio programs on the Internet
+media-sound/girl 6.1.0: Easily find and record live radio programs on the Internet
 media-sound/goobox 3.4.1: Goobox is a CD player for the GNOME desktop environment
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
 media-sound/sound-juicer 9999: CD ripper for GNOME
