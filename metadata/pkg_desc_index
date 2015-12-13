@@ -78,6 +78,7 @@ gnome-extra/gnome-shell-extensions 3.18.0 9999: JavaScript extensions for GNOME 
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
 gnome-extra/gnome-software 3.16.5 3.18.3: Gnome install & update software
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
+gnome-extra/gnome-todo 3.18.1: Personnal task manager
 gnome-extra/gnome-tweak-tool 3.18.0 9999: Tool to customize GNOME 3 options
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
 gnome-extra/libgda 9999: GNOME database access library
