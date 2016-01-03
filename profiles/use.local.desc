@@ -2,10 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-app-admin/packagekit-base:command-not-found - Enable packagekit support on shell "command not found"
-app-admin/packagekit-base:cron - Install cron script for auto-update
-app-admin/packagekit-base:entropy - Enable Entropy backend
-app-admin/packagekit-base:introspection - Use dev-libs/gobject-introspection Enable introspection
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
@@ -84,7 +80,6 @@ gnome-extra/evolution-data-server:vala - Build dev-lang/vala bindings
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
 gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
-gnome-extra/gnome-packagekit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for rebooting
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/libgda:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
