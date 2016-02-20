@@ -16,7 +16,7 @@ app-misc/gnote 9999: Desktop note-taking application
 app-misc/tracker-miner-media 0.1.0: Fetches additional metadata from online resources for media files for tracker
 app-mobilephone/gnome-phone-manager 9999: A program created to allow you to control aspects of your mobile phone from your GNOME desktop
 app-office/planner 9999: Project manager for Gnome
-app-text/evince 3.18.0 9999: Simple document viewer for GNOME
+app-text/evince 9999: Simple document viewer for GNOME
 app-text/libgxps 9999: Library for handling and rendering XPS documents
 app-text/yelp-tools 9999: Collection of tools for building and converting documentation
 dev-libs/folks 9999: Library for aggregating people from multiple sources
