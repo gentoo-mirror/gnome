@@ -13,15 +13,12 @@ app-crypt/libsecret:vala - Enable bindings for dev-lang/vala
 app-crypt/p11-kit:asn1 - Enable ASN.1 certificate support
 app-crypt/p11-kit:trust - Build the trust policy module
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
-app-emulation/libvirt-glib:introspection - Use dev-libs/gobject-introspection for introspection
-app-emulation/libvirt-glib:vala - Enable bindings for dev-lang/vala
 app-text/evince:dvi - Enable the built-in DVI viewer
 app-text/evince:libsecret - Enable support for credentials store
 app-text/evince:multimedia - Enable multimedia support
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
-app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/folks:telepathy - Load contacts from the Telepathy framework
 dev-libs/folks:tracker - Load contacts from app-misc/tracker index
 dev-libs/folks:utils - Build the folks-inspect utility
@@ -31,14 +28,13 @@ dev-libs/glib:mime - Pull in shared MIME database that many glib-based applicati
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software; build gresource utility with ELF support.
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
-dev-libs/libgdata:vala - Enable bindings for dev-lang/vala
+dev-libs/libgdata:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
 dev-libs/libgsystem:systemd - Enable access to journald
 dev-libs/libgweather:glade - Installs catalog files for dev-util/glade
 dev-libs/libpeas:glade - Install the glade catalog
 dev-libs/libpeas:python - Build support for loading dev-lang/python plugins
 dev-libs/totem-pl-parser:archive - Enables support for accessing media files in archives transparently via app-arch/libarchive
-dev-libs/totem-pl-parser:introspection - Use dev-libs/gobject-introspection for introspection
-dev-libs/totem-pl-parser:quvi - Use media-libs/quvi for parsing video links
+dev-libs/totem-pl-parser:quvi - Use media-libs/libquvi for parsing video links
 gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
 gnome-base/gconf:orbit - Use gnome-base/orbit for IPC, same as in gconf-2.x
 gnome-base/gdm:audit - Enable support for sys-process/audit
@@ -63,12 +59,11 @@ gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
 gnome-base/gvfs:gcr - Enable support for app-crypt/gcr
 gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
-gnome-base/gvfs:google - Add google drive support
+gnome-base/gvfs:google - Enables support for accessing Google accounts via dev-libs/libgdata
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
 gnome-base/gvfs:libsecret - Enable app-crypt/libsecret support to store login credentials.
 gnome-base/gvfs:nfs - Enable NFS client support via net-fs/libnfs.
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
-gnome-base/gvfs:udisks - Enable volume monitoring using sys-fs/udisks
 gnome-base/libgnome-keyring:vala - Enable bindings for dev-lang/vala
 gnome-base/nautilus:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
@@ -76,7 +71,6 @@ gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files 
 gnome-base/nautilus:tracker - Add support for app-misc/tracker search
 gnome-extra/evolution-data-server:api-doc-extras - Build documentation for private APIs
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization
-gnome-extra/evolution-data-server:vala - Build dev-lang/vala bindings
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
 gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
@@ -89,7 +83,6 @@ gnome-extra/libgda:libsecret - Enable app-crypt/libsecret support to store login
 gnome-extra/libgda:mdb - Enable support for Microsoft Access database using app-office/mdbtools
 gnome-extra/libgda:reports - Install tools for generating graphical reports
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview
-gnome-extra/libgda:vala - Enable bindings for dev-lang/vala
 gnome-extra/sushi:office - Support viewing file formats such as generated by app-office/libreoffice
 mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnupg and app-crypt/pinentry
@@ -103,24 +96,21 @@ media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering ba
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
+media-libs/mash:introspection - Use dev-libs/gobject-introspection for introspection
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
 media-sound/rhythmbox:html - Use net-libs/webkit-gtk for detecting and displaying HTML podcast episode descriptions.
 media-sound/rhythmbox:libsecret - Enable libsecret support to store login credentials
 media-sound/rhythmbox:visualizer - Enable support for visualizations using media-plugins/gst-plugins-libvisual
 media-sound/rhythmbox:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
-media-video/cheese:sendto - Build the gnome-extra/nautilus-sendto plugin
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
 media-video/totem:nautilus - Enable the nautilus extension
 media-video/totem:python - Build support for dev-lang/python plugins
-media-video/totem:vala - Enable bindings for dev-lang/vala
 media-video/totem:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 net-im/empathy:geoloc - Enable geolocation support through app-misc/geoclue
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)
 net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-libs/gnome-online-accounts:gnome - Use gnome-base/gnome-control-center to set GNOME online accounts preferences
 net-libs/gtk-vnc:gtk3 - Build the gtk3 gtk-vnc library and other gtk3 assets
-net-libs/gtk-vnc:introspection - Use dev-libs/gobject-introspection for introspection
-net-libs/gtk-vnc:vala - Enable bindings for dev-lang/vala
 net-libs/libsoup:samba - Use net-fs/samba for NTLM Single Sign-On
 net-libs/rest:gnome - Extract proxy information using net-libs/libsoup-gnome
 net-misc/spice-gtk:dbus - Support for desktop integration such as automounting and other APIs exposed by your DE via D-Bus
@@ -137,22 +127,17 @@ net-misc/vinagre:ssh - Enable ssh plugin using x11-libs/vte
 net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/telepathy-glib client
 net-misc/vino:libsecret - Enable app-crypt/libsecret support to store login credentials.
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
-net-wireless/gnome-bluetooth:nautilus - Build the gnome-extra/nautilus-sendto plugin
-net-wireless/gnome-bluetooth:sendto - Build the gnome-extra/nautilus-sendto plugin
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
-sys-libs/libosinfo:vala - Enable bindings for dev-lang/vala
 www-client/epiphany:nss - Import passwords from older gecko based www-client/epiphany keyring.
-x11-libs/colord-gtk:vala - Generate bindings for dev-lang/vala
 x11-libs/gtk+:broadway - Enable the GDK Broadway backend.
 x11-libs/gtk+:cloudprint - Enable printing via Google Cloud Print.
 x11-libs/gtk+:colord - Use x11-misc/colord for color management in printing
 x11-libs/gtksourceview:glade - Install a glade catalog file
-x11-libs/gtksourceview:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/vte:glade - Provide integration with dev-util/glade.
+x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter drivers
-x11-misc/colord:vala - Generate bindings for dev-lang/vala
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-wm/mutter:kms - Enable KMS support.
