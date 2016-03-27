@@ -16,7 +16,7 @@ app-misc/gnote 9999: Desktop note-taking application
 app-misc/tracker-miner-media 0.1.0: Fetches additional metadata from online resources for media files for tracker
 app-mobilephone/gnome-phone-manager 9999: A program created to allow you to control aspects of your mobile phone from your GNOME desktop
 app-office/planner 9999: Project manager for Gnome
-app-text/evince 9999: Simple document viewer for GNOME
+app-text/evince 3.20.0 9999: Simple document viewer for GNOME
 app-text/gspell 1.0.0: Spell check library for GTK+ applications
 app-text/libgxps 9999: Library for handling and rendering XPS documents
 app-text/yelp-tools 9999: Collection of tools for building and converting documentation
@@ -47,6 +47,7 @@ gnome-base/dconf 9999: Simple low-level configuration system
 gnome-base/gconf 9999: GNOME configuration system and daemon
 gnome-base/gdm 3.20.0 9999: GNOME Display Manager for managing graphical display servers and user logins
 gnome-base/gnome-control-center 3.20.0 9999: GNOME's main interface to configure various aspects of the desktop
+gnome-base/gnome-core-apps 3.20.0: Sub-meta package for the core applications integrated with GNOME 3
 gnome-base/gnome-core-libs 3.20.0: Sub-meta package for the core libraries of GNOME 3
 gnome-base/gnome-desktop 3.20.0 9999: Libraries for the gnome desktop that are not part of the UI
 gnome-base/gnome-keyring 3.20.0 9999: Password and keyring managing daemon
@@ -77,14 +78,15 @@ gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
 gnome-extra/gnome-todo 3.18.1: Personnal task manager
 gnome-extra/gnome-tweak-tool 3.18.0 9999: Tool to customize GNOME 3 options
+gnome-extra/gnome-user-docs 3.20.0: GNOME end user documentation
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
 gnome-extra/libgda 9999: GNOME database access library
 gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decrypting files with GnuPG
 gnome-extra/sushi 9999: A quick previewer for Nautilus, the GNOME file manager
-gnome-extra/yelp 9999: Help browser for GNOME
+gnome-extra/yelp 3.20.0 9999: Help browser for GNOME
 gnome-extra/yelp-xsl 9999: XSL stylesheets for yelp
 mail-client/evolution 3.19.90 9999: Integrated mail, addressbook and calendaring functionality
-media-gfx/eog 9999: The Eye of GNOME image viewer
+media-gfx/eog 3.20.0 9999: The Eye of GNOME image viewer
 media-gfx/gnome-font-viewer 9999: Font viewer for GNOME
 media-gfx/gnome-screenshot 9999: Screenshot utility for GNOME
 media-libs/clutter 1.26.0 9999: Clutter is a library for creating graphical user interfaces
@@ -93,12 +95,13 @@ media-libs/cogl 1.21.2 9999: A library for using 3D graphics hardware to draw pr
 media-libs/grilo 0.3.0: A framework for easy media discovery and browsing
 media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event library
 media-libs/mash 9999: A library for rendering 3D models with Clutter
+media-plugins/grilo-plugins 0.3.0: A framework for easy media discovery and browsing
 media-sound/girl 6.1.0: Easily find and record live radio programs on the Internet
 media-sound/goobox 3.4.1: Goobox is a CD player for the GNOME desktop environment
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
 media-sound/sound-juicer 9999: CD ripper for GNOME
 media-video/cheese 9999: A cheesy program to take pictures and videos from your webcam
-media-video/totem 9999: Media player for GNOME
+media-video/totem 3.20.0 9999: Media player for GNOME
 net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
 net-im/empathy 9999: Telepathy instant messaging and video/audio call client for GNOME
 net-libs/gnome-online-accounts 3.18.0 9999: GNOME framework for accessing online accounts
