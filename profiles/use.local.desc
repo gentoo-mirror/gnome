@@ -2,6 +2,7 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-accessibility/orca:braille - Enable braille support
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
@@ -13,6 +14,17 @@ app-crypt/libsecret:vala - Enable bindings for dev-lang/vala
 app-crypt/p11-kit:asn1 - Enable ASN.1 certificate support
 app-crypt/p11-kit:trust - Build the trust policy module
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
+app-misc/tracker:cue - Enable cue sheet parsing
+app-misc/tracker:firefox-bookmarks - Install bookmark data miner plugin for www-client/firefox and www-client/firefox-bin
+app-misc/tracker:gsf - Enable gnome-extra/libgsf based data extractor and for ODT.
+app-misc/tracker:iptc - Enable extraction of IPTC data from pictures
+app-misc/tracker:iso - Enable extraction of metadata from ISO disk images
+app-misc/tracker:miner-fs - Enable tracker-miner-fs (required for filesystem indexing)
+app-misc/tracker:nautilus - Enable tracker to integrate with gnome-base/nautilus by providing entries in its context menu
+app-misc/tracker:playlist - Add support for playlists
+app-misc/tracker:stemmer - Add word stemming via dev-libs/snowball-stemmer.
+app-misc/tracker:thunderbird - Install email data miner plugin for mail-client/thunderbird and mail-client/thunderbird-bin
+app-misc/tracker:xps - Add support for XPS file format through app-text/libgxps.
 app-text/evince:dvi - Enable the built-in DVI viewer
 app-text/evince:libsecret - Enable support for credentials store
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus

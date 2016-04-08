@@ -1,5 +1,6 @@
 app-accessibility/at-spi2-atk 9999: Gtk module for bridging AT-SPI to Atk
 app-accessibility/at-spi2-core 9999: D-Bus accessibility specifications and registration daemon
+app-accessibility/orca 3.20.0: Extensible screen reader that provides access to the desktop
 app-admin/gnome-system-log 9999: System log viewer for GNOME
 app-arch/file-roller 9999: Archive manager for GNOME
 app-cdr/brasero 9999: CD/DVD burning application for the GNOME desktop
@@ -13,6 +14,7 @@ app-editors/gedit 3.20.0 9999: A text editor for the GNOME desktop
 app-editors/ghex 9999: GNOME hexadecimal editor
 app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
 app-misc/gnote 9999: Desktop note-taking application
+app-misc/tracker 1.8.0: A tagging metadata database, search tool and indexer
 app-misc/tracker-miner-media 0.1.0: Fetches additional metadata from online resources for media files for tracker
 app-mobilephone/gnome-phone-manager 9999: A program created to allow you to control aspects of your mobile phone from your GNOME desktop
 app-office/planner 9999: Project manager for Gnome
@@ -98,6 +100,7 @@ gnome-extra/gnome-user-docs 3.20.0: GNOME end user documentation
 gnome-extra/gnome-weather 3.20.0: A weather application for GNOME
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
 gnome-extra/libgda 9999: GNOME database access library
+gnome-extra/nautilus-tracker-tags 1.8.0: Nautilus extension to tag files for Tracker
 gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decrypting files with GnuPG
 gnome-extra/sushi 9999: A quick previewer for Nautilus, the GNOME file manager
 gnome-extra/yelp 3.20.0 9999: Help browser for GNOME
@@ -105,6 +108,7 @@ gnome-extra/yelp-xsl 9999: XSL stylesheets for yelp
 mail-client/evolution 3.20.0 9999: Integrated mail, addressbook and calendaring functionality
 media-gfx/eog 3.20.0 9999: The Eye of GNOME image viewer
 media-gfx/gnome-font-viewer 9999: Font viewer for GNOME
+media-gfx/gnome-photos 3.20.0: Access, organize and share your photos on GNOME
 media-gfx/gnome-screenshot 9999: Screenshot utility for GNOME
 media-libs/clutter 1.26.0 9999: Clutter is a library for creating graphical user interfaces
 media-libs/clutter-gtk 9999: Library for embedding a Clutter canvas (stage) in GTK+
@@ -114,9 +118,10 @@ media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event 
 media-libs/mash 9999: A library for rendering 3D models with Clutter
 media-plugins/grilo-plugins 0.3.0: A framework for easy media discovery and browsing
 media-sound/girl 6.1.0: Easily find and record live radio programs on the Internet
+media-sound/gnome-music 3.20.0: Music management for Gnome
 media-sound/goobox 3.4.1: Goobox is a CD player for the GNOME desktop environment
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
-media-sound/sound-juicer 9999: CD ripper for GNOME
+media-sound/sound-juicer 3.20.0 9999: CD ripper for GNOME
 media-video/cheese 3.20.0 9999: A cheesy program to take pictures and videos from your webcam
 media-video/totem 3.20.0 9999: Media player for GNOME
 net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
