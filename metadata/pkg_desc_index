@@ -70,7 +70,7 @@ gnome-base/gnome-light 3.20.0: Meta package for GNOME-Light, merge this package 
 gnome-base/gnome-menus 9999: Library for the Desktop Menu fd.o specification
 gnome-base/gnome-session 3.20.0 9999: Gnome session manager
 gnome-base/gnome-settings-daemon 3.20.0 9999: Gnome Settings Daemon
-gnome-base/gnome-shell 3.20.0 9999: Provides core UI functions for the GNOME 3 desktop
+gnome-base/gnome-shell 3.20.1 9999: Provides core UI functions for the GNOME 3 desktop
 gnome-base/gsettings-desktop-schemas 3.20.0 9999: Collection of GSettings schemas for GNOME desktop
 gnome-base/gvfs 1.26.1 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
