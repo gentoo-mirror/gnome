@@ -70,7 +70,7 @@ gnome-base/gnome-light 3.20.0: Meta package for GNOME-Light, merge this package 
 gnome-base/gnome-menus 9999: Library for the Desktop Menu fd.o specification
 gnome-base/gnome-session 3.20.0 9999: Gnome session manager
 gnome-base/gnome-settings-daemon 3.20.0 9999: Gnome Settings Daemon
-gnome-base/gnome-shell 3.20.1 9999: Provides core UI functions for the GNOME 3 desktop
+gnome-base/gnome-shell 3.20.2 9999: Provides core UI functions for the GNOME 3 desktop
 gnome-base/gsettings-desktop-schemas 3.20.0 9999: Collection of GSettings schemas for GNOME desktop
 gnome-base/gvfs 1.26.1 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
@@ -91,7 +91,7 @@ gnome-extra/gnome-contacts 9999: GNOME contact management application
 gnome-extra/gnome-documents 3.20.0 9999: A document manager application for GNOME
 gnome-extra/gnome-power-manager 3.20.0 9999: GNOME power management service
 gnome-extra/gnome-search-tool 9999: Search tool for GNOME 3
-gnome-extra/gnome-shell-extensions 3.20.0 9999: JavaScript extensions for GNOME Shell
+gnome-extra/gnome-shell-extensions 3.20.1 9999: JavaScript extensions for GNOME Shell
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
 gnome-extra/gnome-system-monitor 3.20.0 9999: The Gnome System Monitor
 gnome-extra/gnome-todo 3.18.1: Personnal task manager
@@ -149,12 +149,12 @@ x11-libs/libcryptui 9999: User interface components for OpenPGP
 x11-libs/libwnck 9999: A window navigation construction kit
 x11-libs/pango 1.37.5 9999: Internationalized text layout and rendering library
 x11-libs/pangox-compat 9999: PangoX compatibility library
-x11-libs/vte 0.44.0 9999: Library providing a virtual terminal emulator widget
+x11-libs/vte 0.44.2 9999: Library providing a virtual terminal emulator widget
 x11-misc/colord 9999: System service to accurately color manage input and output devices
-x11-terms/gnome-terminal 3.20.0 9999: The Gnome Terminal
+x11-terms/gnome-terminal 3.20.2 9999: The Gnome Terminal
 x11-themes/adwaita-icon-theme 3.20: GNOME default icon theme
 x11-themes/gnome-backgrounds 3.20 9999: A set of backgrounds packaged with the GNOME desktop
 x11-themes/gnome-icon-theme-symbolic 9999: Symbolic icons for GNOME default icon theme
 x11-themes/gnome-themes-standard 3.20 9999: Standard Themes for GNOME Applications
 x11-themes/gtk-engines-unico 9999: The Unico GTK+ 3.x theming engine
-x11-wm/mutter 3.20.0 9999: GNOME 3 compositing window manager based on Clutter
+x11-wm/mutter 3.20.2 9999: GNOME 3 compositing window manager based on Clutter
