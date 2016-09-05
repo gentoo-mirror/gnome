@@ -29,7 +29,6 @@ dev-libs/glib 2.46.0-r1 9999: The GLib library of C routines
 dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
 dev-libs/gobject-introspection 1.45.4 9999: Introspection infrastructure for generating gobject library bindings for various languages
 dev-libs/gobject-introspection-common 1.45.4 9999: Build infrastructure for GObject Introspection
-dev-libs/libgames-support 1.0: Library for code commong to Gnome games
 dev-libs/libgdata 9999: GLib-based library for accessing online service APIs using the GData protocol
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
@@ -41,7 +40,7 @@ dev-util/gdbus-codegen 2.46.0 9999: GDBus code and documentation generator
 dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
 games-arcade/gnome-nibbles 3.20.0: Nibbles clone for Gnome
 games-arcade/gnome-robots 3.20.0.1: Avoid the robots and make them crash into each other
-games-board/aisleriot 3.16.2 3.18.2 9999: A collection of solitaire card games for GNOME
+games-board/aisleriot 3.20.2 9999: A collection of solitaire card games for GNOME
 games-board/four-in-a-row 3.20.0: Make lines of the same color to win
 games-board/gnome-chess 3.20.0: Play the classic two-player boardgame of chess
 games-board/gnome-mahjongg 3.20.0: Disassemble a pile of tiles by removing matching pairs
@@ -53,7 +52,7 @@ games-puzzle/gnome-klotski 3.20.0: Slide blocks to solve the puzzle
 games-puzzle/gnome-sudoku 3.20.0: Test your logic skills in this number grid puzzle
 games-puzzle/gnome-taquin 3.20.0: Move tiles so that they reach their places
 games-puzzle/gnome-tetravex 3.20.0: Complete the puzzle by matching numbered tiles
-games-puzzle/gnome2048 3.18.2: Move the tiles until you obtain the 2048 tile
+games-puzzle/gnome2048 3.18.2 3.20.2: Move the tiles until you obtain the 2048 tile
 games-puzzle/lightsoff 3.20.0: Turn off all the lights
 games-puzzle/quadrapassel 3.20.0: Fit falling blocks together
 games-puzzle/swell-foop 3.20.0: Clear the screen by removing groups of colored and shaped tiles
@@ -117,7 +116,7 @@ media-libs/grilo 0.3.0: A framework for easy media discovery and browsing
 media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event library
 media-libs/mash 9999: A library for rendering 3D models with Clutter
 media-plugins/grilo-plugins 0.3.0: A framework for easy media discovery and browsing
-media-sound/girl 6.1.0: Easily find and record live radio programs on the Internet
+media-sound/girl 9.5.1: Easily find and record live radio programs on the Internet
 media-sound/gnome-music 3.20.0: Music management for Gnome
 media-sound/goobox 3.4.1: Goobox is a CD player for the GNOME desktop environment
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
