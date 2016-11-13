@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Aisleriot"
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug gnome qt4"
+IUSE="debug gnome qt5"
 
 # FIXME: quartz support?
 # Does not build with guile-2.0.0 or 2.0.1
@@ -24,24 +24,22 @@ COMMON_DEPEND="
 	>=x11-libs/cairo-1.10
 	>=x11-libs/gtk+-3.4:3
 	gnome? ( >=gnome-base/gconf-2.0:2 )
-	qt4? ( >=dev-qt/qtsvg-4.4:4 )
+	qt5? ( >=dev-qt/qtsvg-5:5 )
 "
 DEPEND="${COMMON_DEPEND}
 	app-arch/gzip
-	dev-libs/libxml2
+	app-text/yelp-tools
 	>=dev-util/intltool-0.40.4
-	dev-util/itstool
+	gnome-base/gnome-common
 	sys-apps/lsb-release
 	>=sys-devel/gettext-0.12
 	virtual/pkgconfig
 	gnome? ( app-text/docbook-xml-dtd:4.3 )
 "
-# dev-util/itstool really needed for help file generation
-# >=app-text/yelp-tools-3.1.1
 
 src_prepare() {
 	# Fix SVG detection and usage
-	eapply "${FILESDIR}"/${PN}-3.16.2-detect-svg.patch
+	eapply "${FILESDIR}"/${PN}-3.22.0-detect-svg.patch
 
 	eautoreconf
 	gnome2_src_prepare
@@ -62,7 +60,7 @@ src_configure() {
 		)
 	fi
 
-	if use qt4 ; then
+	if use qt5 ; then
 		myconf+=(
 			--with-card-theme-formats=all
 			--with-kde-card-theme-path="${EPREFIX}"/usr/share/apps/carddecks
@@ -77,7 +75,6 @@ src_configure() {
 		$(usex debug --enable-debug=yes --enable-debug=minimum) \
 		--enable-sound \
 		--with-pysol-card-theme-path="${EPREFIX}${GAMES_DATADIR}"/pysolfc \
-		GUILE=$(type -P guile-2.0) \
 		${myconf[@]}
 }
 
