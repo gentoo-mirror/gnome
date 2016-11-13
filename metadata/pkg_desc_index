@@ -1,7 +1,5 @@
 app-accessibility/at-spi2-atk 9999: Gtk module for bridging AT-SPI to Atk
 app-accessibility/at-spi2-core 9999: D-Bus accessibility specifications and registration daemon
-app-accessibility/orca 3.20.0: Extensible screen reader that provides access to the desktop
-app-admin/gnome-system-log 9999: System log viewer for GNOME
 app-arch/file-roller 9999: Archive manager for GNOME
 app-cdr/brasero 9999: CD/DVD burning application for the GNOME desktop
 app-crypt/gcr 3.20.0 9999: Libraries for cryptographic UIs and accessing PKCS#11 modules
@@ -40,7 +38,7 @@ dev-util/gdbus-codegen 2.46.0 9999: GDBus code and documentation generator
 dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
 games-arcade/gnome-nibbles 3.20.0: Nibbles clone for Gnome
 games-arcade/gnome-robots 3.20.0.1: Avoid the robots and make them crash into each other
-games-board/aisleriot 3.20.2 3.22.0 9999: A collection of solitaire card games for GNOME
+games-board/aisleriot 3.22.0 3.22.1 9999: A collection of solitaire card games for GNOME
 games-board/four-in-a-row 3.20.0: Make lines of the same color to win
 games-board/gnome-chess 3.20.0: Play the classic two-player boardgame of chess
 games-board/gnome-mahjongg 3.20.0: Disassemble a pile of tiles by removing matching pairs
@@ -93,7 +91,7 @@ gnome-extra/gnome-search-tool 9999: Search tool for GNOME 3
 gnome-extra/gnome-shell-extensions 3.20.1 9999: JavaScript extensions for GNOME Shell
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
 gnome-extra/gnome-system-monitor 3.20.0 9999: The Gnome System Monitor
-gnome-extra/gnome-todo 3.18.1 3.20.2: Personnal task manager
+gnome-extra/gnome-todo 3.18.1 3.20.2 3.22.0: Personnal task manager
 gnome-extra/gnome-tweak-tool 3.20.0 9999: Tool to customize GNOME 3 options
 gnome-extra/gnome-user-docs 3.20.0: GNOME end user documentation
 gnome-extra/gnome-weather 3.20.0: A weather application for GNOME
