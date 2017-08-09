@@ -2,12 +2,12 @@ app-accessibility/at-spi2-atk 9999: Gtk module for bridging AT-SPI to Atk
 app-accessibility/at-spi2-core 9999: D-Bus accessibility specifications and registration daemon
 app-arch/file-roller 9999: Archive manager for GNOME
 app-cdr/brasero 9999: CD/DVD burning application for the GNOME desktop
-app-crypt/gcr 3.20.0 9999: Libraries for cryptographic UIs and accessing PKCS#11 modules
+app-crypt/gcr 9999: Libraries for cryptographic UIs and accessing PKCS#11 modules
 app-crypt/libsecret 9999: GObject library for accessing the freedesktop.org Secret Service API
 app-crypt/p11-kit 9999: Provides a standard configuration setup for installing PKCS#11.
-app-crypt/seahorse 3.20.0 9999: A GNOME application for managing encryption keys
+app-crypt/seahorse 9999: A GNOME application for managing encryption keys
 app-crypt/seahorse-sharing 9999: Daemon for PGP public key sharing using DNS-SD and HKP
-app-dicts/gnome-dictionary 3.20.0 9999: Dictionary utility for GNOME
+app-dicts/gnome-dictionary 9999: Dictionary utility for GNOME
 app-editors/gedit 3.20.0 9999: A text editor for the GNOME desktop
 app-editors/ghex 9999: GNOME hexadecimal editor
 app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
