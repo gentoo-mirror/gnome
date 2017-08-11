@@ -71,7 +71,7 @@ gnome-base/gnome-shell 3.20.2 9999: Provides core UI functions for the GNOME 3 d
 gnome-base/gsettings-desktop-schemas 3.20.0 9999: Collection of GSettings schemas for GNOME desktop
 gnome-base/gvfs 1.26.1 9999: Virtual filesystem implementation for gio
 gnome-base/libgnome-keyring 9999: Compatibility library for accessing secrets
-gnome-base/nautilus 3.20.0 9999: A file manager for the GNOME desktop
+gnome-base/nautilus 9999: A file manager for the GNOME desktop
 gnome-extra/evolution-data-server 3.20.2 9999: Evolution groupware backend
 gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exchange Web Services
 gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
@@ -144,7 +144,7 @@ x11-libs/gtk+ 3.20.2 9999: Gimp ToolKit +
 x11-libs/gtksourceview 3.20.0 9999: A text widget implementing syntax highlighting and other features
 x11-libs/libcryptui 9999: User interface components for OpenPGP
 x11-libs/libwnck 9999: A window navigation construction kit
-x11-libs/pango 1.37.5 9999: Internationalized text layout and rendering library
+x11-libs/pango 9999: Internationalized text layout and rendering library
 x11-libs/pangox-compat 9999: PangoX compatibility library
 x11-libs/vte 0.44.2 9999: Library providing a virtual terminal emulator widget
 x11-misc/colord 9999: System service to accurately color manage input and output devices
