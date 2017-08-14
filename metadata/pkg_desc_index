@@ -77,7 +77,6 @@ gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exc
 gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
 gnome-extra/evolution-groupwise 9999: Evolution module for connecting to Novell Groupwise
 gnome-extra/evolution-kolab 9999: Evolution module for connecting to Kolab groupware servers
-gnome-extra/evolution-mapi 3.18.3 9999: Evolution module for connecting to Microsoft Exchange
 gnome-extra/gnome-boxes 9999: Simple GNOME 3 application to access remote or virtual systems
 gnome-extra/gnome-boxes-nonfree 0.0.2: Vendor logos for gnome-boxes
 gnome-extra/gnome-color-manager 9999: Color profile manager for the GNOME desktop
@@ -146,9 +145,8 @@ x11-libs/pangox-compat 9999: PangoX compatibility library
 x11-libs/vte 0.44.2 9999: Library providing a virtual terminal emulator widget
 x11-misc/colord 9999: System service to accurately color manage input and output devices
 x11-terms/gnome-terminal 3.20.2 9999: The Gnome Terminal
-x11-themes/adwaita-icon-theme 3.20: GNOME default icon theme
-x11-themes/gnome-backgrounds 3.20 9999: A set of backgrounds packaged with the GNOME desktop
+x11-themes/gnome-backgrounds 9999: A set of backgrounds packaged with the GNOME desktop
 x11-themes/gnome-icon-theme-symbolic 9999: Symbolic icons for GNOME default icon theme
-x11-themes/gnome-themes-standard 3.20 9999: Standard Themes for GNOME Applications
+x11-themes/gnome-themes-standard 9999: Standard Themes for GNOME Applications
 x11-themes/gtk-engines-unico 9999: The Unico GTK+ 3.x theming engine
 x11-wm/mutter 3.20.2 9999: GNOME 3 compositing window manager based on Clutter
