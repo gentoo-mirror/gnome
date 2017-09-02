@@ -147,6 +147,7 @@ net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/tele
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 www-client/epiphany:nss - Import passwords from older gecko based www-client/epiphany keyring.
+x11-libs/gdk-pixbuf:X - Build and install the legacy gdk_pixbuf_xlib-2.0 library
 x11-libs/gtk+:broadway - Enable the GDK Broadway backend.
 x11-libs/gtk+:cloudprint - Enable printing via Google Cloud Print.
 x11-libs/gtk+:colord - Use x11-misc/colord for color management in printing
