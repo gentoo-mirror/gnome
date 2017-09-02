@@ -8,7 +8,7 @@ app-crypt/p11-kit 9999: Provides a standard configuration setup for installing P
 app-crypt/seahorse 9999: A GNOME application for managing encryption keys
 app-crypt/seahorse-sharing 9999: Daemon for PGP public key sharing using DNS-SD and HKP
 app-dicts/gnome-dictionary 9999: Dictionary utility for GNOME
-app-editors/gedit 3.20.0 9999: A text editor for the GNOME desktop
+app-editors/gedit 9999: A text editor for the GNOME desktop
 app-editors/ghex 9999: GNOME hexadecimal editor
 app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
 app-misc/gnote 9999: Desktop note-taking application
