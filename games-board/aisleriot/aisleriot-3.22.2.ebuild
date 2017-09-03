@@ -1,10 +1,10 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
+GNOME2_EAUTORECONF="yes"
 
-inherit autotools gnome2
+inherit gnome2
 
 DESCRIPTION="A collection of solitaire card games for GNOME"
 HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Aisleriot"
@@ -32,18 +32,18 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.4
 	gnome-base/gnome-common
 	sys-apps/lsb-release
+	sys-devel/autoconf-archive
 	>=sys-devel/gettext-0.12
 	virtual/pkgconfig
 	gnome? ( app-text/docbook-xml-dtd:4.3 )
 "
 
-src_prepare() {
+PATCHES=(
 	# Fix SVG detection and usage
-	eapply "${FILESDIR}"/${PN}-3.22.0-detect-svg.patch
-
-	eautoreconf
-	gnome2_src_prepare
-}
+	"${FILESDIR}"/${PN}-3.22.0-detect-svg.patch
+	# Fix build with Qt5, bug #617256
+	"${FILESDIR}"/${PN}-3.22.2-qt5-requires-cxx11.patch
+)
 
 src_configure() {
 	local myconf=()
