@@ -38,7 +38,7 @@ dev-util/gdbus-codegen 2.46.0 9999: GDBus code and documentation generator
 dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
 games-arcade/gnome-nibbles 3.20.0: Nibbles clone for Gnome
 games-arcade/gnome-robots 3.20.0.1: Avoid the robots and make them crash into each other
-games-board/aisleriot 3.22.0 3.22.1 9999: A collection of solitaire card games for GNOME
+games-board/aisleriot 3.22.2 9999: A collection of solitaire card games for GNOME
 games-board/four-in-a-row 3.20.0: Make lines of the same color to win
 games-board/gnome-chess 3.20.0: Play the classic two-player boardgame of chess
 games-board/gnome-mahjongg 3.20.0: Disassemble a pile of tiles by removing matching pairs
