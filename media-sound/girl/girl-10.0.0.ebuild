@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -21,7 +20,9 @@ RDEPEND="
 	>=gnome-base/libgnomeui-2
 	>=x11-libs/gtk+-2.24:2
 	dev-libs/libxml2:2
-	media-video/totem
+	media-libs/gstreamer:1.0
+	media-libs/gst-plugins-base:1.0
+	media-libs/gst-plugins-bad:1.0
 "
 DEPEND="${RDEPEND}
 	app-text/yelp-tools
