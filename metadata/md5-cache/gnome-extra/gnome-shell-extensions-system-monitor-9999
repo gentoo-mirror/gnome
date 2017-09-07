@@ -6,6 +6,5 @@ HOMEPAGE=https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.26 app-eselect/eselect-gnome-shell-extensions gnome-base/gnome-shell gnome-base/libgtop[introspection] media-libs/clutter:1.0[introspection] net-misc/networkmanager[introspection] x11-libs/gtk+:3[introspection]
 SLOT=0
-_eclass_exported_funcs=pkg_preinst:xdg pkg_postrm:xdg pkg_postinst:- src_unpack:gnome2-live src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	git-r3	4f7ddb4119309845d6687213171ab445	gnome.org	5e4cc5af3f1b17bdee155bf02e8c2df4	gnome2	757f61a4e147babc67c2959e78467f16	gnome2-live	f8f85cc8fe548a9f99db47abb38dcb26	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0	xdg	6cd76cc914c1a759dee032778487b57f	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
 _md5_=a55ae48a99aebb1f81d5749624b0e850
