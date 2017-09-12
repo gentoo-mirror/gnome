@@ -36,24 +36,8 @@ dev-python/pyatspi 9999: Python binding to at-spi library
 dev-python/pygobject 3.20.0 9999: GLib's GObject library bindings for Python
 dev-util/gdbus-codegen 2.46.0 9999: GDBus code and documentation generator
 dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
-games-arcade/gnome-nibbles 3.20.0: Nibbles clone for Gnome
-games-arcade/gnome-robots 3.20.0.1: Avoid the robots and make them crash into each other
-games-board/aisleriot 3.22.2 9999: A collection of solitaire card games for GNOME
-games-board/four-in-a-row 3.20.0: Make lines of the same color to win
-games-board/gnome-chess 3.20.0: Play the classic two-player boardgame of chess
-games-board/gnome-mahjongg 3.20.0: Disassemble a pile of tiles by removing matching pairs
-games-board/gnome-mines 3.20.0: Clear hidden mines from a minefield
-games-board/iagno 3.20.0: Dominate the board in a classic version of Reversi
-games-board/tali 3.20.0: Beat the odds in a poker-style dice game
-games-puzzle/five-or-more 3.20.0: Five or More Game for GNOME
-games-puzzle/gnome-klotski 3.20.0: Slide blocks to solve the puzzle
-games-puzzle/gnome-sudoku 3.20.0: Test your logic skills in this number grid puzzle
-games-puzzle/gnome-taquin 3.20.0: Move tiles so that they reach their places
-games-puzzle/gnome-tetravex 3.20.0: Complete the puzzle by matching numbered tiles
+games-board/aisleriot 3.22.2 3.22.3 9999: A collection of solitaire card games for GNOME
 games-puzzle/gnome2048 3.20.2 3.22.0: Move the tiles until you obtain the 2048 tile
-games-puzzle/lightsoff 3.20.0: Turn off all the lights
-games-puzzle/quadrapassel 3.20.0: Fit falling blocks together
-games-puzzle/swell-foop 3.20.0: Clear the screen by removing groups of colored and shaped tiles
 gnome-base/dconf 9999: Simple low-level configuration system
 gnome-base/dconf-editor 3.20.0: Graphical tool for editing the dconf configuration database
 gnome-base/gconf 9999: GNOME configuration system and daemon
