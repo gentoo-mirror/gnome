@@ -34,7 +34,7 @@ dev-libs/libpeas 9999: A GObject plugins library
 dev-libs/totem-pl-parser 9999: Playlist parsing library
 dev-python/pyatspi 9999: Python binding to at-spi library
 dev-python/pygobject 3.20.0 9999: GLib's GObject library bindings for Python
-dev-util/gdbus-codegen 2.46.0 9999: GDBus code and documentation generator
+dev-util/gdbus-codegen 2.46.0 2.54.2 9999: GDBus code and documentation generator
 dev-util/itstool 9999: Translation tool for XML documents that uses gettext files and ITS rules
 games-board/aisleriot 3.22.2 3.22.3 9999: A collection of solitaire card games for GNOME
 games-puzzle/gnome2048 3.20.2 3.22.0: Move the tiles until you obtain the 2048 tile
