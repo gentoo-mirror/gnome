@@ -2,3 +2,7 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-text/evince:dvi - Enable the built-in DVI viewer
+app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
+app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
+app-text/evince:xps - Enable XPS viewer using app-text/libgxps
