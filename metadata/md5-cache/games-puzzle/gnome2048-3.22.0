@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare
-DEPEND=|| ( dev-lang/vala:0.36 dev-lang/vala:0.34 dev-lang/vala:0.32 ) app-text/yelp-tools dev-libs/appstream-glib >=dev-util/intltool-0.50 sys-devel/gettext virtual/pkgconfig >=app-portage/elt-patches-20170422 app-arch/xz-utils >=sys-apps/sed-4 dev-util/desktop-file-utils x11-misc/shared-mime-info
+DEPEND=|| ( dev-lang/vala:0.38 dev-lang/vala:0.36 dev-lang/vala:0.34 dev-lang/vala:0.32 ) app-text/yelp-tools dev-libs/appstream-glib >=dev-util/intltool-0.50 sys-devel/gettext virtual/pkgconfig >=app-portage/elt-patches-20170422 app-arch/xz-utils >=sys-apps/sed-4 dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Move the tiles until you obtain the 2048 tile
 EAPI=6
 HOMEPAGE=https://wiki.gnome.org/Apps/2048
@@ -8,5 +8,5 @@ LICENSE=GPL-3+
 RDEPEND=dev-libs/glib:2[dbus] >=dev-libs/libgee-0.14:0.8 dev-libs/libgnome-games-support:1 >=media-libs/clutter-1.12:1.0 >=media-libs/clutter-gtk-1.6:1.0 >=x11-libs/gtk+-3.12:3
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-2048/3.22/gnome-2048-3.22.0.tar.xz
-_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	b4eee44966573b7fb6761e507910b306	gnome.org	5e4cc5af3f1b17bdee155bf02e8c2df4	gnome2	92b42c906a240402217ffe5366520524	gnome2-utils	4d211d7614f303710fca59db6ec12c88	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9	vala	103e6885c83965507391cdc5b6fa0e67	versionator	ce21313503c41896ebcd7d58b0607e37	xdg	6cd76cc914c1a759dee032778487b57f	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	b4eee44966573b7fb6761e507910b306	gnome.org	5e4cc5af3f1b17bdee155bf02e8c2df4	gnome2	92b42c906a240402217ffe5366520524	gnome2-utils	4d211d7614f303710fca59db6ec12c88	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9	vala	0b73428551e4f57fceb6ae60de24431b	versionator	ce21313503c41896ebcd7d58b0607e37	xdg	6cd76cc914c1a759dee032778487b57f	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
 _md5_=b82b68e8b3ff3bd9f3ce6c547773c81e
