@@ -7,8 +7,7 @@
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
-# Completely useless with or without USE static-libs, people need to use
-# pkg-config
+# Completely useless with or without USE static-libs, people need to use pkg-config
 GNOME2_LA_PUNT="yes"
 
 inherit bash-completion-r1 epunt-cxx flag-o-matic gnome-meson libtool linux-info \
@@ -19,6 +18,7 @@ HOMEPAGE="https://www.gtk.org/"
 SRC_URI="${SRC_URI}
 	https://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz" # pkg.m4 for eautoreconf
 
+
 LICENSE="LGPL-2.1+"
 SLOT="2"
 IUSE="dbus debug fam kernel_linux +mime selinux static-libs systemtap test utils xattr"
@@ -27,7 +27,7 @@ REQUIRED_USE="
 	test? ( ${PYTHON_REQUIRED_USE} )
 "
 
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 # Added util-linux multilib dependency to have libmount support (which
 # is always turned on on linux systems, unless explicitly disabled, but
@@ -168,8 +168,6 @@ multilib_src_configure() {
 	# FIXME multilib automagic for libelf
 	# FIXME set systemtap/tapse/static-lib install dir and test it.
 	# FIXME no selinux, fam, xattr for now.
-	# FIXME is this still valid.
-	# libelf used only by the gresource bin ??
 	# FIXME enable docs if possible.
 
 	use static-libs && myconf="-Ddefault_library='static'"
@@ -178,8 +176,8 @@ multilib_src_configure() {
 	gnome-meson_src_configure \
 		${myconf} \
 		-Denable-libmount=$(usex kernel_linux yes no) \
-		$(gnome-meson_use systemtap dtrace) \
-		$(gnome-meson_use systemtap) \
+		$(meson_use systemtap enable-dtrace) \
+		$(meson_use systemtap enable-systemtap) \
 		-Dwith-pcre=system \
 		-Dwith-docs=no \
 		-Dwith-man=yes
@@ -218,8 +216,8 @@ multilib_src_test() {
 	virtx meson_src_test
 }
 
-# FIXME completentiondir
 multilib_src_install() {
+	chmod +x glib-gettextize || die
 	gnome-meson_src_install completiondir="$(get_bashcompdir)"
 	keepdir /usr/$(get_libdir)/gio/modules
 }
@@ -273,7 +271,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# force (re)generation of gschemas.compiled
-	gnome-meson_GNOME2_ECLASS_GLIB_SCHEMAS="force"
+	GNOME2_ECLASS_GLIB_SCHEMAS="force"
 
 	gnome-meson_pkg_postinst
 
