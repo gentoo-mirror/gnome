@@ -1,1 +1,2 @@
 app-text/evince 3.26.0: Simple document viewer for GNOME
+dev-libs/gobject-introspection-common 1.54.1: Build infrastructure for GObject Introspection
