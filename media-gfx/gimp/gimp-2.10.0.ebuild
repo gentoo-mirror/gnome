@@ -4,9 +4,10 @@
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
 
-inherit versionator virtualx autotools gnome2 multilib python-single-r1
+MY_PV="${PV/_rc/-RC}"
+MY_P="${PN}-${MY_PV}"
 
-MY_P="${P/_rc/-RC}"
+inherit versionator virtualx autotools gnome2 multilib python-single-r1 ltprune
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="https://www.gimp.org/"
@@ -18,68 +19,66 @@ KEYWORDS="~amd64 ~x86"
 LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
 IUSE="alsa aalib altivec aqua debug doc openexr gnome postscript jpeg2k cpu_flags_x86_mmx mng python smp cpu_flags_x86_sse udev vector-icons webp wmf xpm"
 
-RDEPEND="
-	app-arch/bzip2
-	>=app-arch/xz-utils-5.0.0
-	>=app-text/poppler-0.44.0[cairo]
+RDEPEND=">=dev-libs/glib-2.54.2:2
 	>=dev-libs/atk-2.2.0
-	>=dev-libs/glib-2.54.2:2
+	>=x11-libs/gtk+-2.24.10:2
+	dev-util/gtk-update-icon-cache
+	>=x11-libs/gdk-pixbuf-2.31:2
+	>=x11-libs/cairo-1.12.2
+	>=x11-libs/pango-1.29.4
+	xpm? ( x11-libs/libXpm )
+	>=media-libs/freetype-2.1.7
+	>=media-libs/harfbuzz-0.9.19
+	>=media-libs/gexiv2-0.10.6
+	>=media-libs/libmypaint-1.3.0[gegl]
+	>=media-gfx/mypaint-brushes-1.3.0
+	>=media-libs/fontconfig-2.12.4
+	sys-libs/zlib
 	dev-libs/libxml2
 	dev-libs/libxslt
-	dev-util/gtk-update-icon-cache
-	>=gnome-base/librsvg-2.40.6:2
-	>=media-gfx/mypaint-brushes-1.3.0
-	>=media-libs/babl-0.1.44
-	>=media-libs/fontconfig-2.12.4
-	>=media-libs/freetype-2.1.7
-	>=media-libs/gegl-0.3.30:0.3[cairo]
-	>=media-libs/gexiv2-0.10.6
-	>=media-libs/harfbuzz-0.9.19
-	>=media-libs/lcms-2.8:2
-	>=media-libs/libmypaint-1.3.0[gegl]
-	>=media-libs/libpng-1.6.25
-	>=media-libs/tiff-3.5.7:0
-	net-libs/glib-networking[ssl]
-	sys-libs/zlib
-	virtual/jpeg:0
-	>=x11-libs/cairo-1.12.2
-	>=x11-libs/gdk-pixbuf-2.31:2
-	>=x11-libs/gtk+-2.24.10:2
-	>=x11-libs/pango-1.29.4
-	x11-libs/libXcursor
 	x11-themes/hicolor-icon-theme
+	>=media-libs/babl-0.1.46
+	>=media-libs/gegl-0.4.0:0.4[cairo]
+	>=dev-libs/glib-2.43
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	aqua? ( x11-libs/gtk-mac-integration )
 	gnome? ( gnome-base/gvfs )
-	jpeg2k? ( >=media-libs/openjpeg-2.1.0 )
+	virtual/jpeg:0
+	jpeg2k? ( >=media-libs/openjpeg-2.1.0:2= )
+	>=media-libs/lcms-2.8:2
 	mng? ( media-libs/libmng )
 	openexr? ( >=media-libs/openexr-1.6.1 )
-	postscript? ( app-text/ghostscript-gpl )
+	>=app-text/poppler-0.44[cairo]
+	>=app-text/poppler-data-0.4.7
+	>=media-libs/libpng-1.6.25:0=
 	python?	(
 		${PYTHON_DEPS}
-		>=dev-python/pycairo-1.0.2[${PYTHON_USEDEP}]
 		>=dev-python/pygtk-2.10.4:2[${PYTHON_USEDEP}]
+		>=dev-python/pycairo-1.0.2[${PYTHON_USEDEP}]
 	)
+	>=media-libs/tiff-3.5.7:0
+	>=gnome-base/librsvg-2.40.6:2
 	webp? ( >=media-libs/libwebp-0.6.0 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
-	xpm? ( x11-libs/libXpm )
-	udev? ( virtual/libgudev:= )
-"
-# dev-util/gtk-doc-am due to our call to eautoreconf below (bug #386453)
+	net-libs/glib-networking[ssl]
+	x11-libs/libXcursor
+	sys-libs/zlib
+	app-arch/bzip2
+	>=app-arch/xz-utils-5.0.0
+	postscript? ( app-text/ghostscript-gpl )
+	udev? ( virtual/libgudev:= )"
 DEPEND="${RDEPEND}
-	>=app-text/poppler-data-0.4.7
 	>=dev-lang/perl-5.10.0
 	dev-libs/appstream-glib
-	dev-util/gtk-doc-am
-	>=dev-util/intltool-0.40.1
 	sys-apps/findutils
-	>=sys-devel/automake-1.11
-	>=sys-devel/gettext-0.19
-	>=sys-devel/libtool-2.2
 	virtual/pkgconfig
+	>=dev-util/intltool-0.40.1
+	>=sys-devel/gettext-0.19
 	doc? ( >=dev-util/gtk-doc-1 )
-"
+	>=sys-devel/libtool-2.2
+	>=sys-devel/automake-1.11
+	dev-util/gtk-doc-am"  # due to our call to eautoreconf below (bug #386453)
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 
@@ -94,13 +93,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	default
+	gnome2_src_prepare
 
 	sed -i -e 's/== "xquartz"/= "xquartz"/' configure.ac || die #494864
 	sed 's:-DGIMP_DISABLE_DEPRECATED:-DGIMP_protect_DISABLE_DEPRECATED:g' -i configure.ac || die #615144
 	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
-
-	gnome2_src_prepare
 
 	sed 's:-DGIMP_protect_DISABLE_DEPRECATED:-DGIMP_DISABLE_DEPRECATED:g' -i configure || die #615144
 	fgrep -q GIMP_DISABLE_DEPRECATED configure || die #615144, self-test
@@ -108,7 +105,7 @@ src_prepare() {
 
 src_configure() {
 	local myconf=(
-		GEGL="${EPREFIX}"/usr/bin/gegl-0.3
+		GEGL="${EPREFIX}"/usr/bin/gegl-0.4
 		GDBUS_CODEGEN="${EPREFIX}"/bin/false
 
 		--enable-default-binary
@@ -152,8 +149,20 @@ src_compile() {
 	addwrite /dev/ati/  # bug 589198
 	addwrite /proc/mtrr  # bug 589198
 
-	export XDG_DATA_DIRS="${EPREFIX}/usr/share"  # bug 587004
+	export XDG_DATA_DIRS="${EPREFIX}"/usr/share  # bug 587004
 	gnome2_src_compile
+}
+
+_clean_up_locales() {
+	[[ -z ${LINGUAS+set} ]] && return
+	einfo "Cleaning up locales..."
+	for lang in ${LANGS}; do
+		has ${lang} ${LINGUAS} && {
+			einfo "- keeping ${lang}"
+			continue
+		}
+		rm -Rf "${ED%/}"/usr/share/locale/"${lang}"
+	done
 }
 
 src_test() {
@@ -171,11 +180,13 @@ src_install() {
 	# precedence on PDF documents by default
 	mv "${ED%/}"/usr/share/applications/{,zzz-}gimp.desktop || die
 
-	find "${ED}" \( -name '*.a' -o -name '*.la' \) -delete || die
+	prune_libtool_files --all
 
 	# Prevent dead symlink gimp-console.1 from downstream man page compression (bug #433527)
 	local gimp_app_version=$(get_version_component_range 1-2)
 	mv "${ED%/}"/usr/share/man/man1/gimp-console{-${gimp_app_version},}.1 || die
+
+	_clean_up_locales
 }
 
 pkg_postinst() {
