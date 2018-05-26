@@ -13,16 +13,17 @@ LICENSE="GPL-2+ CC-BY-SA-3.0"
 # subslot = evd3.(suffix of libevdocument3)-evv3.(suffix of libevview3)
 SLOT="0/evd3.4-evv3.3"
 IUSE="djvu dvi gstreamer gnome gnome-keyring +introspection nautilus nsplugin +postscript t1lib tiff xps"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
 
 # atk used in libview
 # gdk-pixbuf used all over the place
+# bundles unarr library. It does not seem to exist standalone.
 COMMON_DEPEND="
 	dev-libs/atk
 	>=dev-libs/glib-2.36:2[dbus]
 	>=dev-libs/libxml2-2.5:2
 	sys-libs/zlib:=
-	x11-libs/gdk-pixbuf:2
+	>=x11-libs/gdk-pixbuf-2.36.5:2
 	>=x11-libs/gtk+-3.16.0:3[introspection?]
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/cairo-1.10:=

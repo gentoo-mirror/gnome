@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,7 +12,7 @@ fi
 DESCRIPTION="A collection of solitaire card games for GNOME"
 HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Aisleriot"
 
-LICENSE="GPL-3 LGPL-3 FDL-1.1"
+LICENSE="GPL-3 LGPL-3 FDL-1.3"
 SLOT="0"
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
@@ -26,6 +26,7 @@ IUSE="debug gnome qt5"
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	>=dev-scheme/guile-2.0.5:12[deprecated,regex]
+	<dev-scheme/guile-2.1
 	>=gnome-base/librsvg-2.32:2
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/cairo-1.10
