@@ -9,13 +9,11 @@ inherit gnome-meson readme.gentoo-r1 virtualx
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="https://wiki.gnome.org/Apps/Nautilus"
 
-#FIXME: shoudln't this be GPL-3+?
 LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
-#FIXME: tracker is needed
-IUSE="exif gnome +introspection packagekit +previewer selinux sendto xmp"
+IUSE="exif gnome +introspection packagekit +previewer selinux sendto tracker xmp"
 
-KEYWORDS="~amd64"
+KEYWORDS="~alpha ~amd64 ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 # FIXME: tests fails under Xvfb, but pass when building manually
 # "FAIL: check failed in nautilus-file.c, line 8307"
@@ -32,42 +30,39 @@ COMMON_DEPEND="
 	>=dev-libs/libxml2-2.7.8:2
 	>=gnome-base/gnome-desktop-3:3=
 
-	gnome-base/dconf
 	>=gnome-base/gsettings-desktop-schemas-3.8.0
 	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXrender
 
-	>=app-misc/tracker-1:=
 	exif? ( >=media-libs/libexif-0.6.20 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4:= )
 	selinux? ( >=sys-libs/libselinux-2 )
+	tracker? ( >=app-misc/tracker-1:= )
 	xmp? ( >=media-libs/exempi-2.1.0:2 )
 "
 DEPEND="${COMMON_DEPEND}
-	>=dev-lang/perl-5
 	>=dev-util/gdbus-codegen-2.33
-	>=dev-util/gtk-doc-1.10
 	>=sys-devel/gettext-0.19.7
 	virtual/pkgconfig
-	x11-proto/xproto
+	x11-base/xorg-proto
 "
 RDEPEND="${COMMON_DEPEND}
+	gnome-base/dconf
 	packagekit? ( app-admin/packagekit-base )
 	sendto? ( !<gnome-extra/nautilus-sendto-3.0.1 )
 "
-
-# FIXME: does nautilus tracker tags work with tracker 2? there seems to be
-# some automagic involved
-
 PDEPEND="
 	gnome? ( x11-themes/adwaita-icon-theme )
-	>=gnome-extra/nautilus-tracker-tags-0.12
+	tracker? ( >=gnome-extra/nautilus-tracker-tags-0.12 )
 	previewer? ( >=gnome-extra/sushi-0.1.9 )
 	sendto? ( >=gnome-extra/nautilus-sendto-3.0.1 )
 	>=gnome-base/gvfs-1.14[gtk]
 "
 # Need gvfs[gtk] for recent:/// support
+
+PATCHES=(
+	# Keep tracker optional
+	"${FILESDIR}"/${PV}-tracker-support-optional.patch
+)
 
 src_prepare() {
 	if use previewer; then
@@ -82,8 +77,9 @@ src_configure() {
 	# FIXME no doc useflag??
 	gnome-meson_src_configure \
 		-Denable-desktop=true \
-		-Denable-gtk-doc=true \
+		-Denable-gtk-doc=false \
 		-Denable-profiling=false \
+		-Dtracker=$(usex tracker auto disabled) \
 		$(meson_use exif enable-exif) \
 		$(meson_use packagekit enable-packagekit) \
 		$(meson_use sendto nst-extension) \
