@@ -14,7 +14,7 @@ LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-# FIXME: test fails
+
 RDEPEND="
 	>=dev-libs/gjs-1.43.3
 	>=dev-libs/glib-2.32:2
@@ -24,14 +24,19 @@ RDEPEND="
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/pango-1.36[introspection]
 "
+# libxml2+gdk-pixbuf required for glib-compile-resources
 DEPEND="${RDEPEND}
 	dev-libs/appstream-glib
+	dev-libs/libxml2:2
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
 	test? (
 		${PYTHON_DEPS}
 		$(python_gen_any_dep 'dev-util/dogtail[${PYTHON_USEDEP}]') )
 "
+
+# Tests are not maintained with code base
+RESTRICT="test"
 
 python_check_deps() {
 	use test && has_version "dev-util/dogtail[${PYTHON_USEDEP}]"
