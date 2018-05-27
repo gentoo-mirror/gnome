@@ -5,23 +5,18 @@ EAPI=6
 GNOME2_LA_PUNT="yes"
 
 inherit gnome2 readme.gentoo-r1
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="https://wiki.gnome.org/Apps/Gnote"
 
 LICENSE="GPL-3+ FDL-1.1"
 SLOT="0"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-# Automagic glib-2.32 dep
+# Automagic:
+# glib-2.32 dep
+# >=dev-libs/unittest++-1.5.1 (but not detected due to missing .pc)
 COMMON_DEPEND="
 	>=app-crypt/libsecret-0.8
 	>=app-text/gtkspell-3.0:3
@@ -42,10 +37,6 @@ DEPEND="${DEPEND}
 	dev-util/itstool
 	virtual/pkgconfig
 "
-if [[ ${PV} = 9999 ]]; then
-	DEPEND="${DEPEND}
-		app-text/yelp-tools"
-fi
 
 src_prepare() {
 	# Do not alter CFLAGS
