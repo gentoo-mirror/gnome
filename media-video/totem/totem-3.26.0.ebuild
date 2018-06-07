@@ -6,11 +6,6 @@ PYTHON_COMPAT=( python{3_4,3_5,3_6} )
 PYTHON_REQ_USE="threads"
 
 inherit gnome-meson python-single-r1 vala
-if [[ ${PV} = 9999 ]]; then
-	SRC_URI=""
-	EGIT_REPO_URI="https://gitlab.gnome.org/GNOME/totem.git"
-	inherit git-r3
-fi
 
 DESCRIPTION="Media player for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Videos"
@@ -23,11 +18,7 @@ REQUIRED_USE="
 	python? ( introspection ${PYTHON_REQUIRED_USE} )
 "
 
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-fi
+KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 # FIXME:
 # Runtime dependency on gnome-session-2.91
@@ -80,7 +71,6 @@ DEPEND="${COMMON_DEPEND}
 	app-text/yelp-tools
 	>=dev-libs/libxml2-2.6:2
 	>=dev-util/meson-0.44
-	>=dev-util/intltool-0.50.1
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
 	x11-base/xorg-proto
