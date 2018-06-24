@@ -4,7 +4,7 @@
 EAPI=6
 GNOME2_LA_PUNT="yes"
 
-inherit flag-o-matic gnome-meson virtualx
+inherit gnome-meson virtualx
 
 DESCRIPTION="GNOME webbrowser based on Webkit"
 HOMEPAGE="https://wiki.gnome.org/Apps/Web"
@@ -31,6 +31,7 @@ COMMON_DEPEND="
 	>=dev-libs/libxslt-1.1.7
 	>=dev-libs/nettle-3.2
 	dev-db/sqlite:3
+	dev-libs/gmp:0
 	>=app-text/iso-codes-0.35
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
 "
@@ -52,7 +53,8 @@ PATCHES=(
 	# https://bugzilla.gnome.org/show_bug.cgi?id=751593
 	"${FILESDIR}"/${PN}-3.14.0-unittest-2.patch
 )
-#FIXME: it seems it can't use newer libhttpseverywhere
+
+# FIXME: it seems it can't use newer libhttpseverywhere
 src_configure() {
 	gnome-meson_src_configure \
 		-Ddistributor_name=Gentoo \

@@ -4,24 +4,13 @@
 EAPI=6
 inherit gnome-meson virtualx
 
-inherit gnome-meson virtualx
-if [[ ${PV} = 9999 ]]; then
-	SRC_URI=""
-	EGIT_REPO_URI="https://gitlab.gnome.org/GNOME/gnome-power-manager.git"
-	inherit git-r3
-fi
-
 DESCRIPTION="GNOME power management service"
 HOMEPAGE="https://projects.gnome.org/gnome-power-manager/"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="test"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-fi
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.45.8:2
@@ -47,15 +36,6 @@ DEPEND="${COMMON_DEPEND}
 # docbook-sgml-utils and docbook-sgml-dtd-4.1 used for creating man pages
 # (files under ${S}/man).
 # docbook-xml-dtd-4.4 and -4.1.2 are used by the xml files under ${S}/docs.
-
-src_prepare() {
-	# Drop debugger CFLAGS from configure
-	# Touch configure.ac only if running eautoreconf, otherwise
-	# maintainer mode gets triggered -- even if the order is correct
-	sed -e 's:^CPPFLAGS="$CPPFLAGS -g"$::g' \
-		-i configure || die "debugger sed failed"
-	gnome2_src_prepare
-}
 
 src_configure() {
 	gnome-meson_src_configure \

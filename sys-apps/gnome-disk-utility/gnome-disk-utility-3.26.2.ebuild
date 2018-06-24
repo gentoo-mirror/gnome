@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	dev-libs/libpwquality
 	>=media-libs/libcanberra-0.1[gtk3]
 	>=media-libs/libdvdread-4.2.0
-	>=sys-fs/udisks-2.1.1:2
+	>=sys-fs/udisks-2.7.2:2
 	>=x11-libs/gtk+-3.16.0:3
 	>=x11-libs/libnotify-0.7:=
 	systemd? ( >=sys-apps/systemd-209:0= )
@@ -31,11 +31,15 @@ RDEPEND="${COMMON_DEPEND}
 	fat? ( sys-fs/dosfstools )
 	gnome? ( >=gnome-base/gnome-settings-daemon-3.8 )
 "
+# libxml2+gdk-pixbuf required for glib-compile-resources
 DEPEND="${COMMON_DEPEND}
 	dev-libs/appstream-glib
 	dev-libs/libxslt
+	dev-libs/libxml2:2
+	>=dev-util/meson-0.41.0
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
+	x11-libs/gdk-pixbuf:2
 "
 
 src_configure() {
