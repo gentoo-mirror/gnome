@@ -1,19 +1,17 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI="5"
-GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
 
-inherit eutils gnome2 python-r1
+inherit gnome2 python-r1
 if [[ ${PV} = 9999 ]]; then
 	GNOME_LIVE_MODULE="pyatspi2"
 	inherit gnome2-live
 fi
 
 DESCRIPTION="Python binding to at-spi library"
-HOMEPAGE="http://live.gnome.org/Accessibility"
+HOMEPAGE="https://wiki.gnome.org/Accessibility"
 
 # Note: only some of the tests are GPL-licensed, everything else is LGPL
 LICENSE="LGPL-2 GPL-2+"
@@ -26,11 +24,10 @@ fi
 IUSE="" # test
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-COMMON_DEPEND="
+COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-libs/atk-2.11.2
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-2.90.1:3[${PYTHON_USEDEP}]
-	${PYTHON_DEPS}
 "
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/dbus-1
@@ -41,12 +38,13 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "
 
-src_prepare() {
+PATCHES=(
 	# https://bugzilla.gnome.org/show_bug.cgi?id=689957
-	epatch "${FILESDIR}/${PN}-2.6.0-examples-python3.patch"
+	"${FILESDIR}/${PN}-2.6.0-examples-python3.patch"
+)
 
+src_prepare() {
 	gnome2_src_prepare
-
 	python_copy_sources
 }
 

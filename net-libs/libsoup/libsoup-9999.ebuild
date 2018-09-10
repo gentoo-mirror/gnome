@@ -1,28 +1,29 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI="5"
-GCONF_DEBUG="yes"
+EAPI=6
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5,3_6} )
+VALA_USE_DEPEND="vapigen"
 
-inherit gnome2 multilib-minimal python-any-r1
+inherit gnome2 multilib-minimal python-any-r1 vala
 if [[ ${PV} = 9999 ]]; then
 	inherit gnome2-live
 fi
 
 DESCRIPTION="An HTTP library implementation in C"
-HOMEPAGE="https://wiki.gnome.org/LibSoup"
+HOMEPAGE="https://wiki.gnome.org/Projects/libsoup"
 
 LICENSE="LGPL-2+"
 SLOT="2.4"
-IUSE="debug +introspection samba ssl test"
+IUSE="debug gssapi +introspection samba ssl test vala"
+REQUIRED_USE="vala? ( introspection )"
+
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 	IUSE="${IUSE} doc"
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 fi
 
 RDEPEND="
@@ -30,16 +31,18 @@ RDEPEND="
 	>=dev-libs/libxml2-2.9.1-r4:2[${MULTILIB_USEDEP}]
 	>=dev-db/sqlite-3.8.2:3[${MULTILIB_USEDEP}]
 	>=net-libs/glib-networking-2.38.2[ssl?,${MULTILIB_USEDEP}]
-	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
+	gssapi? ( virtual/krb5[${MULTILIB_USEDEP}] )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.5:= )
 	samba? ( net-fs/samba )
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	>=dev-util/intltool-0.35
-	>=dev-util/gtk-doc-am-1.10
+	>=dev-util/gtk-doc-am-1.20
 	sys-devel/gettext
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	test? ( >=dev-libs/glib-2.40:2[${MULTILIB_USEDEP}] )
+	vala? ( $(vala_depend) )
 "
 
 if [[ ${PV} = 9999 ]]; then
@@ -71,6 +74,11 @@ src_prepare() {
 			|| die "sed failed"
 	fi
 
+	# FIXME: workaround upstream not respecting --without-apache-httpd
+	sed -e '/check: start-httpd/d' \
+		-i tests/Makefile.am tests/Makefile.in || die
+
+	vala_src_prepare
 	gnome2_src_prepare
 }
 
@@ -90,7 +98,10 @@ multilib_src_configure() {
 		--disable-tls-check \
 		--without-gnome \
 		--without-apache-httpd \
+		$(usex debug --enable-debug=yes ' ') \
+		$(multilib_native_use_with gssapi) \
 		$(multilib_native_use_enable introspection) \
+		$(multilib_native_use_enable vala) \
 		$(use_with samba ntlm-auth '${EPREFIX}'/usr/bin/ntlm_auth)
 
 	if multilib_is_native_abi; then

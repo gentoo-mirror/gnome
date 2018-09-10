@@ -14,9 +14,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
 	>=dev-libs/glib-2.52.1
-	>=dev-libs/gobject-introspection-1.52.1:=
+	>=dev-libs/gobject-introspection-1.53.4:=
 
-	sys-libs/readline:0
+	sys-libs/readline:0=
 	dev-lang/spidermonkey:52
 	virtual/libffi
 	cairo? ( x11-libs/cairo[X] )
@@ -28,11 +28,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( sys-apps/dbus )
 "
-
-#PATCHES=(
-	# Disable unittest failing without pt_BR locale, upstream bug #????
-#	"${FILESDIR}"/1.48.6-disable-unittest.patch
-#)
 
 src_configure() {
 	# FIXME: add systemtap/dtrace support, like in glib:2

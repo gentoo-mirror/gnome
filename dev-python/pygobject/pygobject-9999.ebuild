@@ -1,11 +1,9 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
-
-GCONF_DEBUG="no"
+EAPI=6
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} )
 
 inherit eutils gnome2 python-r1 virtualx
 if [[ ${PV} = 9999 ]]; then
@@ -20,9 +18,9 @@ SLOT="3"
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 fi
-IUSE="+cairo examples test +threads"
+IUSE="+cairo examples test"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
@@ -31,10 +29,10 @@ REQUIRED_USE="
 
 COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-libs/glib-2.38:2
-	>=dev-libs/gobject-introspection-1.39:=
+	>=dev-libs/gobject-introspection-1.46.0:=
 	virtual/libffi:=
 	cairo? (
-		>=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}]
+		>=dev-python/pycairo-1.11.1[${PYTHON_USEDEP}]
 		x11-libs/cairo )
 "
 DEPEND="${COMMON_DEPEND}
@@ -45,10 +43,10 @@ DEPEND="${COMMON_DEPEND}
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 		x11-libs/cairo[glib]
-		x11-libs/gdk-pixbuf:2[introspection]
+		x11-libs/gdk-pixbuf:2[introspection,jpeg]
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection]
-		!sparc? ( python_targets_python2_7? ( dev-python/pyflakes[$(python_gen_usedep python2_7)] ) ) )
+		python_targets_python2_7? ( dev-python/pyflakes[$(python_gen_usedep python2_7)] ) )
 "
 # gnome-base/gnome-common required by eautoreconf
 
@@ -62,9 +60,6 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	# Comment out broken unittest
-	epatch "${FILESDIR}"/${PN}-3.16.1-unittest.patch
-
 	gnome2_src_prepare
 	python_copy_sources
 }
@@ -75,8 +70,7 @@ src_configure() {
 	# docs disabled by upstream default since they are very out of date
 	configuring() {
 		gnome2_src_configure \
-			$(use_enable cairo) \
-			$(use_enable threads thread)
+			$(use_enable cairo)
 
 		# Pyflakes tests work only in python2, bug #516744
 		if use test && [[ ${EPYTHON} != python2.7 ]]; then
@@ -93,27 +87,19 @@ src_compile() {
 }
 
 src_test() {
-	unset DBUS_SESSION_BUS_ADDRESS
-	export GIO_USE_VFS="local" # prevents odd issues with deleting ${T}/.gvfs
-	export GIO_USE_VOLUME_MONITOR="unix" # prevent udisks-related failures in chroots, bug #449484
-	export SKIP_PEP8="yes"
+	local -x GIO_USE_VFS="local" # prevents odd issues with deleting ${T}/.gvfs
+	local -x GIO_USE_VOLUME_MONITOR="unix" # prevent udisks-related failures in chroots, bug #449484
+	local -x SKIP_PEP8="yes"
 
 	testing() {
-		export XDG_CACHE_HOME="${T}/${EPYTHON}"
-		run_in_build_dir Xemake check
-		unset XDG_CACHE_HOME
+		local -x XDG_CACHE_HOME="${T}/${EPYTHON}"
+		emake -C "${BUILD_DIR}" check
 	}
-	python_foreach_impl testing
-	unset GIO_USE_VFS
+	virtx python_foreach_impl testing
 }
 
 src_install() {
-	DOCS="AUTHORS ChangeLog* NEWS README"
-
 	python_foreach_impl run_in_build_dir gnome2_src_install
 
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
+	dodoc -r examples
 }

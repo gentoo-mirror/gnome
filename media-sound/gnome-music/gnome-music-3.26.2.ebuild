@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python{3_4,3_5} )
+PYTHON_COMPAT=( python{3_4,3_5,3_6} )
 
 inherit gnome2 python-single-r1
 
@@ -30,8 +30,8 @@ COMMON_DEPEND="
 # https://bugzilla.gnome.org/show_bug.cgi?id=731613
 RDEPEND="${COMMON_DEPEND}
 	|| (
-		app-misc/tracker[gstreamer]
-		app-misc/tracker[ffmpeg]
+		app-misc/tracker-miners[gstreamer]
+		app-misc/tracker-miners[ffmpeg]
 	)
 	x11-libs/libnotify[introspection]
 	dev-python/dbus-python[${PYTHON_USEDEP}]
