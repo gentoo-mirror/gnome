@@ -1,29 +1,31 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+GNOME2_EAUTORECONF="yes"
 inherit gnome2 virtualx
 
 DESCRIPTION="GNOME 3 compositing window manager based on Clutter"
 HOMEPAGE="https://git.gnome.org/browse/mutter/"
+SRC_URI+=" https://dev.gentoo.org/~leio/distfiles/${P}-patchset.tar.xz"
 
 LICENSE="GPL-2+"
-SLOT="0/0"
-#FIXME add remote desktop support
+SLOT="0/1" # 0/libmutter_api_version - ONLY gnome-shell (or anything using mutter-clutter-<api_version>.pc) should use the subslot
+
 IUSE="debug gles2 input_devices_wacom +introspection test udev wayland"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # libXi-1.7.4 or newer needed per:
 # https://bugzilla.gnome.org/show_bug.cgi?id=738944
-COMMON_DEPEND="
+RDEPEND="
 	>=dev-libs/atk-2.5.3
 	>=x11-libs/gdk-pixbuf-2:2
 	>=dev-libs/json-glib-0.12.0
 	>=x11-libs/pango-1.30[introspection?]
 	>=x11-libs/cairo-1.14[X]
 	>=x11-libs/gtk+-3.19.8:3[X,introspection?]
-	>=dev-libs/glib-2.53.2:2[dbus]
+	>=dev-libs/glib-2.53.2:2
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/startup-notification-0.7
 	>=x11-libs/libXcomposite-0.2
@@ -57,7 +59,7 @@ COMMON_DEPEND="
 	udev? ( >=virtual/libgudev-232:= )
 	wayland? (
 		>=dev-libs/libinput-1.4
-		>=dev-libs/wayland-1.13
+		>=dev-libs/wayland-1.13.0
 		>=dev-libs/wayland-protocols-1.9
 		>=media-libs/mesa-10.3[egl,gbm,wayland]
 		sys-apps/systemd
@@ -67,16 +69,19 @@ COMMON_DEPEND="
 		x11-libs/libdrm:=
 	)
 "
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
+	dev-util/glib-utils
 	>=sys-devel/gettext-0.19.6
 	virtual/pkgconfig
 	x11-base/xorg-proto
 	test? ( app-text/docbook-xml-dtd:4.5 )
 	wayland? ( >=sys-kernel/linux-headers-4.4 )
 "
-RDEPEND="${COMMON_DEPEND}
-	!x11-misc/expocity
-"
+
+PATCHES=(
+	# Lots of patches from gnome-3-26 branch on top of 3.26.2
+	"${WORKDIR}"/patches/
+)
 
 src_prepare() {
 	# Disable building of noinst_PROGRAM for tests
@@ -101,6 +106,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# TODO: pipewire remote desktop support; --disable-remote-desktop actually enables it due to upstream autotools bug in 3.26.2 (omitted means disabled)
+	# TODO: nvidia EGLDevice support
 	# Prefer gl driver by default
 	# GLX is forced by mutter but optional in clutter
 	# xlib-egl-platform required by mutter x11 backend

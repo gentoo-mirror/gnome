@@ -8,6 +8,7 @@ inherit gnome.org gnome2-utils meson pax-utils python-single-r1 virtualx xdg
 
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
 HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
+SRC_URI+=" https://dev.gentoo.org/~leio/distfiles/${P}-patchset.tar.xz"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
@@ -114,6 +115,8 @@ DEPEND="${COMMON_DEPEND}
 " #gtk-doc? ( >=dev-util/gtk-doc-1.17 )
 
 PATCHES=(
+	# Patches from gnome-3-26 branch on top of 3.26.2
+	"${WORKDIR}"/patches/
 	# Change favorites defaults, bug #479918
 	"${FILESDIR}"/${PN}-3.22.0-defaults.patch
 	# Fix automagic gnome-bluetooth dep, bug #398145
