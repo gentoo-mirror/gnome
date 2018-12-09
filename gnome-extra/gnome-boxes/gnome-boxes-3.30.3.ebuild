@@ -26,11 +26,11 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.52:2
 	>=x11-libs/gtk+-3.22.20:3
 	>=net-libs/gtk-vnc-0.8.0-r1[gtk3(+),vala]
-	>=sys-libs/libosinfo-1.1.0
+	>=sys-libs/libosinfo-1.1.0[vala]
 	app-crypt/libsecret[vala]
 	>=net-libs/libsoup-2.44:2.4
 	virtual/libusb:1
-	>=app-emulation/libvirt-glib-0.2.3
+	>=app-emulation/libvirt-glib-0.2.3[vala]
 	>=dev-libs/libxml2-2.7.8:2
 	>=net-misc/spice-gtk-0.32[gtk3(+),smartcard,usbredir,vala]
 	>=app-misc/tracker-2:0=
@@ -99,7 +99,7 @@ pkg_postinst() {
 	readme.gentoo_print_elog
 }
 
-pkg_postinst() {
+pkg_postrm() {
 	xdg_pkg_postrm
 	gnome2_schemas_update
 	gnome2_icon_cache_update
