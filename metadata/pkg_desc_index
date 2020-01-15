@@ -26,7 +26,6 @@ dev-libs/glib 9999: The GLib library of C routines
 dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
 dev-libs/gobject-introspection 9999: Introspection system for GObject-based libraries
 dev-libs/gobject-introspection-common 9999: Build infrastructure for GObject Introspection
-dev-libs/gom 0.3.3-r1: GObject to SQLite object mapper library
 dev-libs/libgdata 9999: GLib-based library for accessing online service APIs using the GData protocol
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
