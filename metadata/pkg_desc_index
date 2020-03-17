@@ -13,7 +13,7 @@ app-editors/ghex 9999: GNOME hexadecimal editor
 app-editors/latexila 3.30.2-r1: Integrated LaTeX environment for GNOME
 app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
 app-misc/gnote 9999: Desktop note-taking application
-app-office/gnome-todo 3.24.2 3.26.2 3.28.1: Personal task manager
+app-office/gnome-todo 3.24.2 3.26.2 3.28.1 3.28.1-r1: Personal task manager
 app-office/planner 9999: Project manager for Gnome
 app-text/evince 9999: Simple document viewer for GNOME
 app-text/libgepub 0.6.0: GObject based library for handling and rendering epub documents
