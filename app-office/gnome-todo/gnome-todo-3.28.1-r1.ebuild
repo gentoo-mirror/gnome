@@ -18,9 +18,7 @@ RDEPEND="
 	>=x11-libs/gtk+-3.22.0:3[introspection?]
 	>=net-libs/gnome-online-accounts-3.25.3
 	>=dev-libs/libpeas-1.17
-	>=gnome-extra/evolution-data-server-3.17.1:=[gtk]
-	<gnome-extra/evolution-data-server-3.33
-	>=dev-libs/libical-0.43
+	>=gnome-extra/evolution-data-server-3.33.1:=[gtk]
 	net-libs/rest:0.7
 	dev-libs/json-glib
 	introspection? ( >=dev-libs/gobject-introspection-1.42:= )
@@ -33,6 +31,10 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/gnome-todo-eds-libecal-2.0.patch
+)
 
 src_configure() {
 	# TODO: There aren't any consumers of the introspection outside gnome-todo's own plugins, so maybe we
