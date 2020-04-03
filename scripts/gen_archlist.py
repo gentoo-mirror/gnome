@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # vim: set sw=4 sts=4 et :
 # Author(s): Nirbheek Chauhan <nirbheek@gentoo.org>
 #
@@ -37,7 +37,7 @@ logger = logging.getLogger('gen_archlist')
 #############
 # GNOME_OVERLAY = PORTDB.getRepositoryPath('gnome')
 portage.portdb.porttrees = [portage.settings['PORTDIR']]
-STABLE_ARCHES = ('amd64', 'arm', 'arm64', 'hppa', 'ia64',
+STABLE_ARCHES = ('amd64', 'arm', 'arm64', 'hppa',
                  'ppc', 'ppc64', 's390', 'sparc', 'x86')
 UNSTABLE_ARCHES = ('~alpha', '~amd64', '~arm', '~arm64', '~hppa', '~ia64',
                    '~m68k', '~ppc', '~ppc64', '~s390', '~sparc',
