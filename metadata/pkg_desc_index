@@ -8,7 +8,6 @@ app-crypt/p11-kit 9999: Provides a standard configuration setup for installing P
 app-crypt/seahorse 9999: A GNOME application for managing encryption keys
 app-crypt/seahorse-sharing 9999: Daemon for PGP public key sharing using DNS-SD and HKP
 app-dicts/gnome-dictionary 9999: Dictionary utility for GNOME
-app-editors/gedit 3.30.2 9999: A text editor for the GNOME desktop
 app-editors/ghex 9999: GNOME hexadecimal editor
 app-editors/latexila 3.30.2-r1: Integrated LaTeX environment for GNOME
 app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
@@ -74,10 +73,8 @@ media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event 
 media-libs/mash 9999: A library for rendering 3D models with Clutter
 media-sound/girl 9.5.2 10.0.0: Easily find and record live radio programs on the Internet
 media-sound/goobox 3.4.1 3.4.2: Goobox is a CD player for the GNOME desktop environment
-media-sound/rhythmbox 9999: Music management and playback software for GNOME
 media-sound/sound-juicer 9999: CD ripper for GNOME
 media-video/cheese 9999: A cheesy program to take pictures and videos from your webcam
-media-video/totem 9999: Media player for GNOME
 net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
 net-im/empathy 9999: Telepathy instant messaging and video/audio call client for GNOME
 net-libs/gtk-vnc 9999: VNC viewer widget for GTK
