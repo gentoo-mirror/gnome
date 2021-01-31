@@ -10,17 +10,14 @@ app-crypt/seahorse-sharing 9999: Daemon for PGP public key sharing using DNS-SD 
 app-dicts/gnome-dictionary 9999: Dictionary utility for GNOME
 app-editors/ghex 9999: GNOME hexadecimal editor
 app-editors/latexila 3.30.2-r1: Integrated LaTeX environment for GNOME
-app-emulation/libvirt-glib 9999: GLib and GObject mappings for libvirt
 app-misc/gnote 9999: Desktop note-taking application
 app-office/gnome-todo 3.24.2 3.26.2 3.28.1 3.28.1-r1: Personal task manager
-app-office/planner 9999: Project manager for Gnome
 app-text/evince 9999: Simple document viewer for GNOME
 app-text/libgepub 0.6.0: GObject based library for handling and rendering epub documents
 app-text/yelp-tools 9999: Collection of tools for building and converting documentation
 dev-libs/folks 9999: Library for aggregating people from multiple sources
 dev-libs/gdl 9999: GNOME docking library
 dev-libs/gjs 9999: Javascript bindings for GNOME
-dev-libs/glib 9999: The GLib library of C routines
 dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
 dev-libs/gobject-introspection 9999: Introspection system for GObject-based libraries
 dev-libs/gobject-introspection-common 9999: Build infrastructure for GObject Introspection
@@ -28,8 +25,6 @@ dev-libs/libgdata 9999: GLib-based library for accessing online service APIs usi
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
 dev-libs/totem-pl-parser 9999: Playlist parsing library
-dev-python/pyatspi 9999: Python binding to at-spi library
-dev-util/gdbus-codegen 9999: GDBus code and documentation generator
 games-board/aisleriot 3.22.5 3.22.7 9999: A collection of solitaire card games for GNOME
 games-puzzle/gnome2048 3.26.1 3.30.0: Move the tiles until you obtain the 2048 tile
 gnome-base/gconf 9999: GNOME configuration system and daemon
@@ -54,7 +49,6 @@ gnome-extra/gnome-search-tool 9999: Search tool for GNOME 3
 gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
 gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
-gnome-extra/libgda 9999: GNOME database access library
 gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decrypting files with GnuPG
 gnome-extra/sushi 9999: A quick previewer for Nautilus, the GNOME file manager
 gnome-extra/yelp 9999: Help browser for GNOME
@@ -76,14 +70,12 @@ media-video/cheese 9999: A cheesy program to take pictures and videos from your 
 media-video/totem 9999: Media player for GNOME
 net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
 net-im/empathy 9999: Telepathy instant messaging and video/audio call client for GNOME
-net-libs/gtk-vnc 9999: VNC viewer widget for GTK
 net-libs/libgssh 2014.4: GIO-like friendly API for libssh
 net-libs/libhttpseverywhere 0.8.0: Leverage the power of HTTPS Everywhere
 net-libs/libzapojit 9999: GLib/GObject wrapper for the SkyDrive and Hotmail REST APIs
 net-libs/rest 9999: Helper library for RESTful services
 net-misc/gnome-online-miners 3.30.0: Crawls through your online content
 net-misc/hotssh 9999: An interface to Secure Shell for Gnome and OpenSSH
-net-misc/spice-gtk 9999: Set of GObject and Gtk objects for connecting to Spice servers and a client GUI
 net-misc/vinagre 9999: VNC client for the GNOME desktop
 net-misc/vino 9999: An integrated VNC server for GNOME
 sys-apps/baobab 9999: Disk usage browser for GNOME
