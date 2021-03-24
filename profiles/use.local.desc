@@ -35,7 +35,6 @@ dev-libs/totem-pl-parser:quvi - Use media-libs/libquvi for parsing video links
 gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
 gnome-base/gconf:orbit - Use gnome-base/orbit for IPC, same as in gconf-2.x
 gnome-base/gnome-keyring:ssh-agent - Use GNOME Keyring to unlock SSH keys. Recommended unless you are using ECDSA or Ed25519 keys.
-gnome-base/libgnome-keyring:vala - Enable bindings for dev-lang/vala
 gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/nautilus:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
