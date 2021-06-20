@@ -16,9 +16,7 @@ app-text/yelp-tools 9999: Collection of tools for building and converting docume
 dev-libs/folks 9999: Library for aggregating people from multiple sources
 dev-libs/gdl 9999: GNOME docking library
 dev-libs/gjs 9999: Javascript bindings for GNOME
-dev-libs/gmime 9999: Utilities for creating and parsing messages using MIME
 dev-libs/gobject-introspection-common 9999: Build infrastructure for GObject Introspection
-dev-libs/libgdata 9999: GLib-based library for accessing online service APIs using the GData protocol
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
 dev-libs/totem-pl-parser 9999: Playlist parsing library
@@ -55,7 +53,6 @@ media-gfx/gnome-photos 3.28.1 3.30.1: Access, organize and share your photos on 
 media-gfx/gnome-screenshot 9999: Screenshot utility for GNOME
 media-libs/clutter 9999: Clutter is a library for creating graphical user interfaces
 media-libs/clutter-gtk 9999: Library for embedding a Clutter canvas (stage) in GTK+
-media-libs/gsound 9999: Thin GObject wrapper around the libcanberra sound event library
 media-sound/girl 9.5.2 10.0.0: Easily find and record live radio programs on the Internet
 media-sound/goobox 3.4.1 3.4.2: Goobox is a CD player for the GNOME desktop environment
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
@@ -68,13 +65,10 @@ net-libs/libhttpseverywhere 0.8.0: Leverage the power of HTTPS Everywhere
 net-libs/libzapojit 9999: GLib/GObject wrapper for the SkyDrive and Hotmail REST APIs
 net-misc/gnome-online-miners 3.30.0: Crawls through your online content
 net-misc/hotssh 9999: An interface to Secure Shell for Gnome and OpenSSH
-net-misc/vinagre 9999: VNC client for the GNOME desktop
 net-misc/vino 9999: An integrated VNC server for GNOME
 sys-apps/baobab 9999: Disk usage browser for GNOME
 sys-apps/gnome-disk-utility 9999: Disk Utility for GNOME using udisks
-sys-libs/libosinfo 9999: GObject library for managing information about real and virtual OSes
 www-client/epiphany 9999: GNOME webbrowser based on Webkit
-x11-libs/colord-gtk 9999: GTK support library for colord
 x11-libs/gdk-pixbuf 9999: Image loading library for GTK+
 x11-libs/libcryptui 9999: User interface components for OpenPGP
 x11-libs/libwnck 9999: A window navigation construction kit
