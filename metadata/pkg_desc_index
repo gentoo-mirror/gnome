@@ -1,64 +1,36 @@
 app-cdr/brasero 9999: CD/DVD burning application for the GNOME desktop
 app-crypt/gcr 9999: Libraries for cryptographic UIs and accessing PKCS#11 modules
-app-crypt/p11-kit 9999: Provides a standard configuration setup for installing PKCS#11.
 app-crypt/seahorse 9999: A GNOME application for managing encryption keys
-app-crypt/seahorse-sharing 9999: Daemon for PGP public key sharing using DNS-SD and HKP
-app-editors/ghex 9999: GNOME hexadecimal editor
 app-editors/latexila 3.30.2-r1: Integrated LaTeX environment for GNOME
 app-misc/gnote 9999: Desktop note-taking application
 app-text/evince 9999: Simple document viewer for GNOME
 app-text/yelp-tools 9999: Collection of tools for building and converting documentation
 dev-libs/folks 9999: Library for aggregating people from multiple sources
-dev-libs/gdl 9999: GNOME docking library
 dev-libs/gjs 9999: Javascript bindings for GNOME
-dev-libs/gobject-introspection-common 9999: Build infrastructure for GObject Introspection
 dev-libs/libgsystem 2014.1: GIO-based library for use by operating system components
 dev-libs/libgweather 9999: Library to access weather information from online services
-dev-libs/totem-pl-parser 9999: Playlist parsing library
 games-board/aisleriot 3.22.5 3.22.7 9999: A collection of solitaire card games for GNOME
 games-puzzle/gnome2048 3.26.1 3.30.0: Move the tiles until you obtain the 2048 tile
-gnome-base/gconf 9999: GNOME configuration system and daemon
-gnome-base/gnome-menus 9999: Library for the Desktop Menu fd.o specification
-gnome-base/gsettings-desktop-schemas 9999: Collection of GSettings schemas for GNOME desktop
 gnome-base/librsvg 2.42.1: Scalable Vector Graphics (SVG) rendering library
 gnome-extra/evolution-data-server 3.32.1 9999: Evolution groupware backend
-gnome-extra/evolution-ews 9999: Evolution module for connecting to Microsoft Exchange Web Services
-gnome-extra/evolution-exchange 9999: Evolution module for connecting to Microsoft Exchange
-gnome-extra/evolution-kolab 9999: Evolution module for connecting to Kolab groupware servers
-gnome-extra/gnome-search-tool 9999: Search tool for GNOME 3
-gnome-extra/gnome-shell-extensions-system-monitor 9999: System monitor extension for GNOME Shell
 gnome-extra/gnome-system-monitor 9999: The Gnome System Monitor
-gnome-extra/gtkhtml 9999: Lightweight HTML rendering/printing/editing engine
-gnome-extra/seahorse-nautilus 9999: Nautilus extension for encrypting and decrypting files with GnuPG
 gnome-extra/sushi 9999: A quick previewer for Nautilus, the GNOME file manager
 gnome-extra/yelp 9999: Help browser for GNOME
 gnome-extra/yelp-xsl 9999: XSL stylesheets for yelp
 mail-client/evolution 9999: Integrated mail, addressbook and calendaring functionality
-media-gfx/eog 9999: The Eye of GNOME image viewer
 media-gfx/gnome-photos 3.28.1 3.30.1: Access, organize and share your photos on GNOME
 media-libs/clutter 9999: Clutter is a library for creating graphical user interfaces
-media-libs/clutter-gtk 9999: Library for embedding a Clutter canvas (stage) in GTK+
 media-sound/girl 9.5.2 10.0.0: Easily find and record live radio programs on the Internet
 media-sound/goobox 3.4.1 3.4.2: Goobox is a CD player for the GNOME desktop environment
 media-sound/rhythmbox 9999: Music management and playback software for GNOME
-media-sound/sound-juicer 9999: CD ripper for GNOME
 media-video/cheese 9999: A cheesy program to take pictures and videos from your webcam
 media-video/totem 9999: Media player for GNOME
-net-analyzer/gnome-nettool 9999: Graphical front-ends to various networking command-line
-net-libs/libgssh 2014.4: GIO-like friendly API for libssh
-net-libs/libzapojit 9999: GLib/GObject wrapper for the SkyDrive and Hotmail REST APIs
 net-misc/gnome-online-miners 3.30.0: Crawls through your online content
-net-misc/hotssh 9999: An interface to Secure Shell for Gnome and OpenSSH
-net-misc/vino 9999: An integrated VNC server for GNOME
 sys-apps/baobab 9999: Disk usage browser for GNOME
 x11-libs/gdk-pixbuf 9999: Image loading library for GTK+
-x11-libs/libcryptui 9999: User interface components for OpenPGP
-x11-libs/libwnck 9999: A window navigation construction kit
 x11-libs/pango 9999: Internationalized text layout and rendering library
-x11-libs/pangox-compat 9999: PangoX compatibility library
 x11-libs/tepl 3.0.0 4.2.0-r1: GtkSourceView-based text editors and IDE helper library
 x11-libs/vte 9999: Library providing a virtual terminal emulator widget
 x11-terms/gnome-terminal 9999: The Gnome Terminal
 x11-themes/gnome-backgrounds 9999: A set of backgrounds packaged with the GNOME desktop
-x11-themes/gnome-icon-theme-symbolic 9999: Symbolic icons for GNOME default icon theme
 x11-themes/gnome-themes-standard 9999: Standard Themes for GNOME Applications
